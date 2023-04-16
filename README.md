@@ -2,7 +2,7 @@
 HAL based CUBEMX generated project, finds a *.bin file inside the SD card and runs it in flash.    
 Based in the Adafruit's feather stm32f405 board    
 
-## System feathers are tested here:    
+## System features are tested here:    
 https://github.com/javiBajoCero/featherSDcardTests
 
 ## How the bootloader works (broad view)
