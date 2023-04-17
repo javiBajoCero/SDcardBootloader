@@ -27,7 +27,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "bootloaderMain.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -102,6 +102,16 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  if(isthereSDcard()==YES){
+		  if(isThereFirmwarefile()==YES){
+			  if(doFlashandSDfirmwarecontentsMatch()==YES){
+				  //jump to app
+			  }else{
+				  //program FLASH with SD content
+			  }
+		  }
+	  }
+	  HAL_Delay(100);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
