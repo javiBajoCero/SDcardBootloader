@@ -10,7 +10,7 @@
 
 #include "main.h"
 
-#define mainAPPstartFlashAddr 0x8060000//flash memory available for the bootloader
+#define mainAPPstartFlashAddr 0x8010000//flash memory available for the bootloader
 
 typedef enum {
   YES=1,

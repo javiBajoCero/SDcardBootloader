@@ -941,7 +941,7 @@ BootloaderLogicEnum doFlashandSDfirmwarecontentsMatch(){
  8000830:	200010a8 	.word	0x200010a8
  8000834:	20002114 	.word	0x20002114
  8000838:	20002290 	.word	0x20002290
- 800083c:	08060000 	.word	0x08060000
+ 800083c:	08010000 	.word	0x08010000
 
 08000840 <compareRAMbufferwithFlashcontents>:
 
@@ -1003,11 +1003,11 @@ BootloaderLogicEnum eraseFLASHappSpace(){
 	erase.TypeErase=FLASH_TYPEERASE_SECTORS;
  8000890:	2300      	movs	r3, #0
  8000892:	60bb      	str	r3, [r7, #8]
-	erase.Sector=FLASH_SECTOR_7;//0x8060000 //RM0090 pag75
- 8000894:	2307      	movs	r3, #7
+	erase.Sector=FLASH_SECTOR_4;//0x8010000 //RM0090 pag75
+ 8000894:	2304      	movs	r3, #4
  8000896:	613b      	str	r3, [r7, #16]
-	erase.NbSectors=5;//7-8-9-10-11
- 8000898:	2305      	movs	r3, #5
+	erase.NbSectors=2;//4-5
+ 8000898:	2302      	movs	r3, #2
  800089a:	617b      	str	r3, [r7, #20]
 	erase.VoltageRange=FLASH_VOLTAGE_RANGE_3;//https://electronics.stackexchange.com/questions/200992/can%C2%B4t-erase-data-from-flash-memory-stm32
  800089c:	2302      	movs	r3, #2
@@ -1071,7 +1071,7 @@ BootloaderLogicEnum programfromRAMtoFLASH(){
 		HAL_FLASH_Program(FLASH_TYPEPROGRAM_BYTE, mainAPPstartFlashAddr+i, buffer[i]);
  80008fc:	687b      	ldr	r3, [r7, #4]
  80008fe:	f103 6100 	add.w	r1, r3, #134217728	; 0x8000000
- 8000902:	f501 21c0 	add.w	r1, r1, #393216	; 0x60000
+ 8000902:	f501 3180 	add.w	r1, r1, #65536	; 0x10000
  8000906:	4a0e      	ldr	r2, [pc, #56]	; (8000940 <programfromRAMtoFLASH+0x54>)
  8000908:	687b      	ldr	r3, [r7, #4]
  800090a:	4413      	add	r3, r2
@@ -1172,7 +1172,7 @@ void jumpToApp(){
  80009aa:	3708      	adds	r7, #8
  80009ac:	46bd      	mov	sp, r7
  80009ae:	bd80      	pop	{r7, pc}
- 80009b0:	08060000 	.word	0x08060000
+ 80009b0:	08010000 	.word	0x08010000
 
 080009b4 <MX_DMA_Init>:
 

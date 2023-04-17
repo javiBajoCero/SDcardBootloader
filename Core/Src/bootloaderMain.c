@@ -152,8 +152,8 @@ BootloaderLogicEnum eraseFLASHappSpace(){
 	HAL_StatusTypeDef status;
 	uint32_t SectorError=0;
 	erase.TypeErase=FLASH_TYPEERASE_SECTORS;
-	erase.Sector=FLASH_SECTOR_7;//0x8060000 //RM0090 pag75
-	erase.NbSectors=5;//7-8-9-10-11
+	erase.Sector=FLASH_SECTOR_4;//0x8010000 //RM0090 pag75
+	erase.NbSectors=2;//4-5
 	erase.VoltageRange=FLASH_VOLTAGE_RANGE_3;//https://electronics.stackexchange.com/questions/200992/can%C2%B4t-erase-data-from-flash-memory-stm32
 	status=HAL_FLASH_Unlock();
 		if(status!=HAL_OK){return NO;}
