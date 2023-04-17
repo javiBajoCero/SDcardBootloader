@@ -105,9 +105,11 @@ int main(void)
 	  if(isthereSDcard()==YES){
 		  if(isThereFirmwarefile()==YES){
 			  if(doFlashandSDfirmwarecontentsMatch()==YES){
-				  //jump to app
+				  jumpToApp();
 			  }else{
-				  //program FLASH with SD content
+				  eraseFLASHappSpace();
+				  programfromRAMtoFLASH();
+				  jumpToApp();
 			  }
 		  }
 	  }

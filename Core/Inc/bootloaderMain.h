@@ -20,5 +20,8 @@ typedef enum {
 BootloaderLogicEnum isthereSDcard();
 BootloaderLogicEnum isThereFirmwarefile();
 BootloaderLogicEnum doFlashandSDfirmwarecontentsMatch();
+void jumpToApp();
+BootloaderLogicEnum eraseFLASHappSpace();
+BootloaderLogicEnum programfromRAMtoFLASH();
 
 #endif /* INC_BOOTLOADERMAIN_H_ */

@@ -38,9 +38,7 @@ BootloaderLogicEnum isSDcardMounted();
 BootloaderLogicEnum isthereafirmwarefolder(const TCHAR* path);
 BootloaderLogicEnum isthereafirmwarefile();
 BootloaderLogicEnum compareRAMbufferwithFlashcontents(char * rambuffer, char * flashbuffer, UINT size);
-BootloaderLogicEnum eraseFLASHappSpace();
-BootloaderLogicEnum programfromRAMtoFLASH();
-void jumpToApp();
+
 void deinitEverything();
 
 
@@ -129,11 +127,9 @@ BootloaderLogicEnum doFlashandSDfirmwarecontentsMatch(){
 	}
 
 	if(compareRAMbufferwithFlashcontents(buffer, (char *)mainAPPstartFlashAddr, bytesreadfromfile)!=YES){
-		eraseFLASHappSpace();
-		programfromRAMtoFLASH();
-
+		return NO;
 	}
-	jumpToApp();
+
 	return YES;
 
 }
@@ -177,6 +173,10 @@ BootloaderLogicEnum programfromRAMtoFLASH(){
 void deinitEverything() {
 	//-- reset peripherals to guarantee flawless start of user application
 	//	HAL_GPIO_DeInit(LED_GPIO_Port, LED_Pin);
+    // Sync, close file, unmount
+    stat = f_close(&myFILE);
+    f_mount(0, SDPath, 0);
+
 	HAL_UART_DeInit(&huart3);
 	HAL_SD_DeInit(&hsd);
 	HAL_ADC_DeInit(&hadc1);
