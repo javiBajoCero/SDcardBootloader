@@ -104,13 +104,11 @@ int main(void)
   {
 	  if(isthereSDcard()==YES){
 		  if(isThereFirmwarefile()==YES){
-			  if(doFlashandSDfirmwarecontentsMatch()==YES){
-				  jumpToApp();
-			  }else{
+			  while(doFlashandSDfirmwarecontentsMatch()==NO){
 				  eraseFLASHappSpace();
 				  programfromRAMtoFLASH();
-				  jumpToApp();
 			  }
+			  jumpToApp();
 		  }
 	  }
 	  HAL_Delay(100);

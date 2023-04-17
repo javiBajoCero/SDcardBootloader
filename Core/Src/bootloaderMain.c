@@ -113,7 +113,7 @@ BootloaderLogicEnum isthereafirmwarefile(){
 
 BootloaderLogicEnum doFlashandSDfirmwarecontentsMatch(){
 	UINT bytesreadfromfile=0;
-
+	fullfilepath[0]=0;
 	strcat(fullfilepath,directorypath);
 	strcat(fullfilepath,"/");
 	strcat(fullfilepath,filinfo.fname);
@@ -129,6 +129,10 @@ BootloaderLogicEnum doFlashandSDfirmwarecontentsMatch(){
 	if(compareRAMbufferwithFlashcontents(buffer, (char *)mainAPPstartFlashAddr, bytesreadfromfile)!=YES){
 		return NO;
 	}
+
+    // Sync, close file, unmount
+    stat = f_close(&myFILE);
+    f_mount(0, SDPath, 0);
 
 	return YES;
 
@@ -163,7 +167,7 @@ BootloaderLogicEnum eraseFLASHappSpace(){
 
 BootloaderLogicEnum programfromRAMtoFLASH(){
 	HAL_FLASH_Unlock();
-	for (uint32_t i = 0; i < filinfo.fsize; ++i) {
+	for (uint32_t i = 0; i < filinfo.fsize; ++i) {//https://community.st.com/s/question/0D50X00009XkXWXSA3/stm32f446re-flashtypeprogramdoubleword-doesnt-work
 		HAL_FLASH_Program(FLASH_TYPEPROGRAM_BYTE, mainAPPstartFlashAddr+i, buffer[i]);
 	}
 	HAL_FLASH_Lock();
@@ -173,10 +177,6 @@ BootloaderLogicEnum programfromRAMtoFLASH(){
 void deinitEverything() {
 	//-- reset peripherals to guarantee flawless start of user application
 	//	HAL_GPIO_DeInit(LED_GPIO_Port, LED_Pin);
-    // Sync, close file, unmount
-    stat = f_close(&myFILE);
-    f_mount(0, SDPath, 0);
-
 	HAL_UART_DeInit(&huart3);
 	HAL_SD_DeInit(&hsd);
 	HAL_ADC_DeInit(&hadc1);
