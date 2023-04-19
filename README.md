@@ -8,7 +8,7 @@ https://github.com/javiBajoCero/featherSDcardTests
 
 
 
-## APP.bin files stored inside firmware_folder to be flashed in chips memory ,special considerations
+## .bin files to be flashed by the bootloader.
 The Firmware "APP" that gets loaded and executed by this bootloader is going to be stored in FLASH memory at address 0x8010000, this APP.bin vector table needs to be offseted 0x0010000.
 Changes need to be made in its `system_stm32f4xx.c`
 ![image](https://user-images.githubusercontent.com/25673527/232601442-1b48b112-e407-4a26-9c20-8e958c538a95.png)
