@@ -1,0 +1,16 @@
+digraph "/home/runner/work/SDcardBootloader/SDcardBootloader/bootloader/Drivers" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_60925fc218da8ca7908795bf5f624060 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_60925fc218da8ca7908795bf5f624060.html"];
+    dir_60925fc218da8ca7908795bf5f624060 [shape=plaintext label="Drivers"];
+  dir_bd09ff09a9c7d83a4c030dbdaee94d76 [shape=box label="CMSIS" fillcolor="white" style="filled" color="red" URL="dir_bd09ff09a9c7d83a4c030dbdaee94d76.html"];
+  dir_0f7073d6b1d1d49104212e142cbd4b45 [shape=box label="STM32F4xx_HAL_Driver" fillcolor="white" style="filled" color="red" URL="dir_0f7073d6b1d1d49104212e142cbd4b45.html"];
+  }
+  dir_c6310732a22f63c0c2fc5595561e68f1 [shape=box label="Core" fillcolor="white" style="filled" color="red" URL="dir_c6310732a22f63c0c2fc5595561e68f1.html"];
+  dir_c6310732a22f63c0c2fc5595561e68f1->dir_0f7073d6b1d1d49104212e142cbd4b45 [headlabel="11", labeldistance=1.5 headhref="dir_000000_000025.html"];
+  dir_c6310732a22f63c0c2fc5595561e68f1->dir_bd09ff09a9c7d83a4c030dbdaee94d76 [headlabel="1", labeldistance=1.5 headhref="dir_000000_000019.html"];
+  dir_0f7073d6b1d1d49104212e142cbd4b45->dir_bd09ff09a9c7d83a4c030dbdaee94d76 [headlabel="12", labeldistance=1.5 headhref="dir_000025_000019.html"];
+  dir_0f7073d6b1d1d49104212e142cbd4b45->dir_c6310732a22f63c0c2fc5595561e68f1 [headlabel="1", labeldistance=1.5 headhref="dir_000025_000000.html"];
+}

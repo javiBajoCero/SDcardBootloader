@@ -1,0 +1,69 @@
+\hypertarget{struct_diskio__drv_type_def}{}\doxysection{Diskio\+\_\+drv\+Type\+Def Struct Reference}
+\label{struct_diskio__drv_type_def}\index{Diskio\_drvTypeDef@{Diskio\_drvTypeDef}}
+
+
+Disk IO Driver structure definition.  
+
+
+
+
+{\ttfamily \#include $<$ff\+\_\+gen\+\_\+drv.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{diskio_8h_adba6790898ce4029c20a34b898ce73c1}{DSTATUS}}($\ast$ \mbox{\hyperlink{struct_diskio__drv_type_def_a0a76a71f4c60db374e4f71c8dda1bc3a}{disk\+\_\+initialize}} )(\mbox{\hyperlink{integer_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE}})
+\item 
+\mbox{\hyperlink{diskio_8h_adba6790898ce4029c20a34b898ce73c1}{DSTATUS}}($\ast$ \mbox{\hyperlink{struct_diskio__drv_type_def_af5745ab1618254bca05d433492bc6a49}{disk\+\_\+status}} )(\mbox{\hyperlink{integer_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE}})
+\item 
+\mbox{\hyperlink{diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2b}{DRESULT}}($\ast$ \mbox{\hyperlink{struct_diskio__drv_type_def_a99988d3379fff5ce83d69ed8aa4d3d58}{disk\+\_\+read}} )(\mbox{\hyperlink{integer_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE}}, \mbox{\hyperlink{integer_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE}} $\ast$, \mbox{\hyperlink{integer_8h_ad342ac907eb044443153a22f964bf0af}{DWORD}}, \mbox{\hyperlink{integer_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}})
+\item 
+\mbox{\hyperlink{diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2b}{DRESULT}}($\ast$ \mbox{\hyperlink{struct_diskio__drv_type_def_abc6ae3a939d7b40e41ce0d0ff3381b84}{disk\+\_\+write}} )(\mbox{\hyperlink{integer_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE}}, const \mbox{\hyperlink{integer_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE}} $\ast$, \mbox{\hyperlink{integer_8h_ad342ac907eb044443153a22f964bf0af}{DWORD}}, \mbox{\hyperlink{integer_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}})
+\item 
+\mbox{\hyperlink{diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2b}{DRESULT}}($\ast$ \mbox{\hyperlink{struct_diskio__drv_type_def_a5fa782f00378c004758c9a8f7860e600}{disk\+\_\+ioctl}} )(\mbox{\hyperlink{integer_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE}}, \mbox{\hyperlink{integer_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE}}, void $\ast$)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Disk IO Driver structure definition. 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_diskio__drv_type_def_a0a76a71f4c60db374e4f71c8dda1bc3a}\label{struct_diskio__drv_type_def_a0a76a71f4c60db374e4f71c8dda1bc3a}} 
+\index{Diskio\_drvTypeDef@{Diskio\_drvTypeDef}!disk\_initialize@{disk\_initialize}}
+\index{disk\_initialize@{disk\_initialize}!Diskio\_drvTypeDef@{Diskio\_drvTypeDef}}
+\doxysubsubsection{\texorpdfstring{disk\_initialize}{disk\_initialize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{diskio_8h_adba6790898ce4029c20a34b898ce73c1}{DSTATUS}}($\ast$ disk\+\_\+initialize) (\mbox{\hyperlink{integer_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE}})}
+
+Initialize Disk Drive ~\newline
+ \mbox{\Hypertarget{struct_diskio__drv_type_def_a5fa782f00378c004758c9a8f7860e600}\label{struct_diskio__drv_type_def_a5fa782f00378c004758c9a8f7860e600}} 
+\index{Diskio\_drvTypeDef@{Diskio\_drvTypeDef}!disk\_ioctl@{disk\_ioctl}}
+\index{disk\_ioctl@{disk\_ioctl}!Diskio\_drvTypeDef@{Diskio\_drvTypeDef}}
+\doxysubsubsection{\texorpdfstring{disk\_ioctl}{disk\_ioctl}}
+{\footnotesize\ttfamily \mbox{\hyperlink{diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2b}{DRESULT}}($\ast$ disk\+\_\+ioctl) (\mbox{\hyperlink{integer_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE}}, \mbox{\hyperlink{integer_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE}}, void $\ast$)}
+
+I/O control operation when \+\_\+\+USE\+\_\+\+IOCTL = 1 \mbox{\Hypertarget{struct_diskio__drv_type_def_a99988d3379fff5ce83d69ed8aa4d3d58}\label{struct_diskio__drv_type_def_a99988d3379fff5ce83d69ed8aa4d3d58}} 
+\index{Diskio\_drvTypeDef@{Diskio\_drvTypeDef}!disk\_read@{disk\_read}}
+\index{disk\_read@{disk\_read}!Diskio\_drvTypeDef@{Diskio\_drvTypeDef}}
+\doxysubsubsection{\texorpdfstring{disk\_read}{disk\_read}}
+{\footnotesize\ttfamily \mbox{\hyperlink{diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2b}{DRESULT}}($\ast$ disk\+\_\+read) (\mbox{\hyperlink{integer_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE}}, \mbox{\hyperlink{integer_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE}} $\ast$, \mbox{\hyperlink{integer_8h_ad342ac907eb044443153a22f964bf0af}{DWORD}}, \mbox{\hyperlink{integer_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}})}
+
+Read Sector(s) ~\newline
+ \mbox{\Hypertarget{struct_diskio__drv_type_def_af5745ab1618254bca05d433492bc6a49}\label{struct_diskio__drv_type_def_af5745ab1618254bca05d433492bc6a49}} 
+\index{Diskio\_drvTypeDef@{Diskio\_drvTypeDef}!disk\_status@{disk\_status}}
+\index{disk\_status@{disk\_status}!Diskio\_drvTypeDef@{Diskio\_drvTypeDef}}
+\doxysubsubsection{\texorpdfstring{disk\_status}{disk\_status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{diskio_8h_adba6790898ce4029c20a34b898ce73c1}{DSTATUS}}($\ast$ disk\+\_\+status) (\mbox{\hyperlink{integer_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE}})}
+
+Get Disk Status ~\newline
+ \mbox{\Hypertarget{struct_diskio__drv_type_def_abc6ae3a939d7b40e41ce0d0ff3381b84}\label{struct_diskio__drv_type_def_abc6ae3a939d7b40e41ce0d0ff3381b84}} 
+\index{Diskio\_drvTypeDef@{Diskio\_drvTypeDef}!disk\_write@{disk\_write}}
+\index{disk\_write@{disk\_write}!Diskio\_drvTypeDef@{Diskio\_drvTypeDef}}
+\doxysubsubsection{\texorpdfstring{disk\_write}{disk\_write}}
+{\footnotesize\ttfamily \mbox{\hyperlink{diskio_8h_aacdfef1dad6565f65c26d12fe0ea4b2b}{DRESULT}}($\ast$ disk\+\_\+write) (\mbox{\hyperlink{integer_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE}}, const \mbox{\hyperlink{integer_8h_a4ae1dab0fb4b072a66584546209e7d58}{BYTE}} $\ast$, \mbox{\hyperlink{integer_8h_ad342ac907eb044443153a22f964bf0af}{DWORD}}, \mbox{\hyperlink{integer_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}})}
+
+Write Sector(s) when \+\_\+\+USE\+\_\+\+WRITE = 0 ~\newline
+ 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/\+SDcard\+Bootloader/\+SDcard\+Bootloader/bootloader/\+Middlewares/\+Third\+\_\+\+Party/\+Fat\+Fs/src/\mbox{\hyperlink{ff__gen__drv_8h}{ff\+\_\+gen\+\_\+drv.\+h}}\end{DoxyCompactItemize}

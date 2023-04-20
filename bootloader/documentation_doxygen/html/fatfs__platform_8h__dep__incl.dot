@@ -1,0 +1,44 @@
+digraph "/home/runner/work/SDcardBootloader/SDcardBootloader/bootloader/FATFS/Target/fatfs_platform.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/FATFS/Target/fatfs\l_platform.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=": fatfs_platform header file"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/FATFS/Target/bsp\l_driver_sd.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bsp__driver__sd_8h.html",tooltip="This file contains the common defines and functions prototypes for the bsp_driver_sd...."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/FATFS/Target/bsp\l_driver_sd.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bsp__driver__sd_8c.html",tooltip="This file includes a generic uSD card driver. To be completed by the user according to the board used..."];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/FATFS/Target/ffconf.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ffconf_8h.html",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/Middlewares/Third\l_Party/FatFs/src/ff.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ff_8h.html",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/FATFS/App/fatfs.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fatfs_8h.html",tooltip="Header for fatfs applications."];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/Core/Src/bootloaderMain.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootloader_main_8c.html",tooltip=" "];
+  Node6 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/Core/Src/main.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8c.html",tooltip=": Main program body"];
+  Node6 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/FATFS/App/fatfs.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fatfs_8c.html",tooltip="Code for fatfs applications."];
+  Node5 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/Middlewares/Third\l_Party/FatFs/src/ff.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ff_8c.html",tooltip=" "];
+  Node5 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/Middlewares/Third\l_Party/FatFs/src/ff_gen_drv.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ff__gen__drv_8h.html",tooltip="Header for ff_gen_drv.c module."];
+  Node11 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/FATFS/Target/sd\l_diskio.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sd__diskio_8c.html",tooltip="SD Disk I/O driver."];
+  Node11 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/Middlewares/Third\l_Party/FatFs/src/diskio.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$diskio_8c.html",tooltip=" "];
+  Node11 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/Middlewares/Third\l_Party/FatFs/src/ff_gen_drv.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ff__gen__drv_8c.html",tooltip="FatFs generic low level driver."];
+  Node5 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/Middlewares/Third\l_Party/FatFs/src/option/ccsbcs.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ccsbcs_8c.html",tooltip=" "];
+  Node5 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/Middlewares/Third\l_Party/FatFs/src/option/syscall.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$syscall_8c.html",tooltip=" "];
+  Node2 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/FATFS/Target/sd\l_diskio.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sd__diskio_8h.html",tooltip="Header for sd_diskio.c module."];
+  Node17 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/FATFS/Target/fatfs\l_platform.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fatfs__platform_8c.html",tooltip=": fatfs_platform source file"];
+}

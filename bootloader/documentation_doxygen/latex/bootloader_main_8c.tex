@@ -1,0 +1,257 @@
+\hypertarget{bootloader_main_8c}{}\doxysection{/home/runner/work/\+SDcard\+Bootloader/\+SDcard\+Bootloader/bootloader/\+Core/\+Src/bootloader\+Main.c File Reference}
+\label{bootloader_main_8c}\index{/home/runner/work/SDcardBootloader/SDcardBootloader/bootloader/Core/Src/bootloaderMain.c@{/home/runner/work/SDcardBootloader/SDcardBootloader/bootloader/Core/Src/bootloaderMain.c}}
+{\ttfamily \#include \char`\"{}bootloader\+Main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fatfs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}usart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}adc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sdio.\+h\char`\"{}}\newline
+Include dependency graph for bootloader\+Main.\+c\+:
+% FIG 0
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_jump_struct}{Jump\+Struct}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{bootloader_main_8c_a2076cddaaefe04cd6faffa7624f39f00}{APPsize}}~(64$\ast$0x400)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void() \mbox{\hyperlink{bootloader_main_8c_a9737ef58c9961a76fa18170f200acf98}{application\+\_\+t}}(void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} \mbox{\hyperlink{bootloader_main_8c_ab9d6015915e86857d061d4f4e3a034c1}{is\+SDcard\+Mounted}} ()
+\item 
+\mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} \mbox{\hyperlink{bootloader_main_8c_aa49a0465ed710d7bea43b2e0a4f6a945}{isthereafirmwarefolder}} (const \mbox{\hyperlink{ff_8h_a03bdb8ce5895c7e261aadc2529637546}{TCHAR}} $\ast$path)
+\item 
+\mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} \mbox{\hyperlink{bootloader_main_8c_a51b01b9a7dc09793089182ed2854c313}{isthereafirmwarefile}} ()
+\item 
+\mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} \mbox{\hyperlink{bootloader_main_8c_ad102a91892e4d71b73031ea346fa252c}{compare\+RAMbufferwith\+Flashcontents}} (char $\ast$rambuffer, char $\ast$flashbuffer, \mbox{\hyperlink{integer_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}} size)
+\item 
+void \mbox{\hyperlink{bootloader_main_8c_abc0f16be0d136ae4392a954edb12cbe0}{deinit\+Everything}} ()
+\item 
+\mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} \mbox{\hyperlink{bootloader_main_8c_acbe4793c98f5c72fd4d58e3df85d2312}{isthere\+SDcard}} ()
+\item 
+\mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} \mbox{\hyperlink{bootloader_main_8c_a00dc442d16eb0c90dd198e8808879454}{is\+There\+Firmwarefile}} ()
+\item 
+\mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} \mbox{\hyperlink{bootloader_main_8c_a46677f1496ee3f5c576bb791603ad181}{do\+Flashand\+SDfirmwarecontents\+Match}} ()
+\item 
+\mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} \mbox{\hyperlink{bootloader_main_8c_a7d4543e2ded0bd1d2da1ffae6dbfff86}{erase\+FLASHapp\+Space}} ()
+\item 
+\mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} \mbox{\hyperlink{bootloader_main_8c_a7ee4693b04d0b0431767d7f4fa02d961}{programfrom\+RAMto\+FLASH}} ()
+\item 
+void \mbox{\hyperlink{bootloader_main_8c_a1ac0dd897f22b1f895670c8b55a3338c}{jump\+To\+App}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_f_a_t_f_s}{FATFS}} \mbox{\hyperlink{bootloader_main_8c_ae5bcde72e0e0b29ec86d00ba3e5cd51f}{fs}}
+\item 
+\mbox{\hyperlink{struct_f_i_l}{FIL}} \mbox{\hyperlink{bootloader_main_8c_a2dfa7a2488da4cfb0055c9cf4e47a1d4}{my\+FILE}}
+\item 
+\mbox{\hyperlink{integer_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}} \mbox{\hyperlink{bootloader_main_8c_a583d18a854cefaad5dad4c7b2e7a8ccb}{test\+Byte}}
+\item 
+\mbox{\hyperlink{ff_8h_a49d0171ecbd362cda5680a0d360db44c}{FRESULT}} \mbox{\hyperlink{bootloader_main_8c_a997cca28dbf70dc07b4dd0a1567f190b}{stat}}
+\item 
+\mbox{\hyperlink{struct_d_i_r}{DIR}} \mbox{\hyperlink{bootloader_main_8c_ad55a148f17a6dfac70d53442873a5502}{directory}}
+\item 
+\mbox{\hyperlink{struct_f_i_l_i_n_f_o}{FILINFO}} \mbox{\hyperlink{bootloader_main_8c_ac72abd22c77f07d25bed1af446a22f47}{filinfo}}
+\item 
+const char \mbox{\hyperlink{bootloader_main_8c_a169b9b8fac1f35114c4f382bff890c3b}{directorypath}} \mbox{[}$\,$\mbox{]} =\char`\"{}firmware\+\_\+folder\char`\"{}
+\item 
+char \mbox{\hyperlink{bootloader_main_8c_a04e69e581f6965b3c50ad1874a6b604e}{fullfilepath}} \mbox{[}100\mbox{]} =\{0\}
+\item 
+char \mbox{\hyperlink{bootloader_main_8c_a7685bebd1f91c9d87dfe7c28a154861b}{buffer}} \mbox{[}\mbox{\hyperlink{bootloader_main_8c_a2076cddaaefe04cd6faffa7624f39f00}{APPsize}}\mbox{]} =\{0\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{bootloader_main_8c_a2076cddaaefe04cd6faffa7624f39f00}\label{bootloader_main_8c_a2076cddaaefe04cd6faffa7624f39f00}} 
+\index{bootloaderMain.c@{bootloaderMain.c}!APPsize@{APPsize}}
+\index{APPsize@{APPsize}!bootloaderMain.c@{bootloaderMain.c}}
+\doxysubsubsection{\texorpdfstring{APPsize}{APPsize}}
+{\footnotesize\ttfamily \#define APPsize~(64$\ast$0x400)}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{bootloader_main_8c_a9737ef58c9961a76fa18170f200acf98}\label{bootloader_main_8c_a9737ef58c9961a76fa18170f200acf98}} 
+\index{bootloaderMain.c@{bootloaderMain.c}!application\_t@{application\_t}}
+\index{application\_t@{application\_t}!bootloaderMain.c@{bootloaderMain.c}}
+\doxysubsubsection{\texorpdfstring{application\_t}{application\_t}}
+{\footnotesize\ttfamily typedef void() application\+\_\+t(void)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{bootloader_main_8c_ad102a91892e4d71b73031ea346fa252c}\label{bootloader_main_8c_ad102a91892e4d71b73031ea346fa252c}} 
+\index{bootloaderMain.c@{bootloaderMain.c}!compareRAMbufferwithFlashcontents@{compareRAMbufferwithFlashcontents}}
+\index{compareRAMbufferwithFlashcontents@{compareRAMbufferwithFlashcontents}!bootloaderMain.c@{bootloaderMain.c}}
+\doxysubsubsection{\texorpdfstring{compareRAMbufferwithFlashcontents()}{compareRAMbufferwithFlashcontents()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} compare\+RAMbufferwith\+Flashcontents (\begin{DoxyParamCaption}\item[{char $\ast$}]{rambuffer,  }\item[{char $\ast$}]{flashbuffer,  }\item[{\mbox{\hyperlink{integer_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}}}]{size }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{bootloader_main_8c_abc0f16be0d136ae4392a954edb12cbe0}\label{bootloader_main_8c_abc0f16be0d136ae4392a954edb12cbe0}} 
+\index{bootloaderMain.c@{bootloaderMain.c}!deinitEverything@{deinitEverything}}
+\index{deinitEverything@{deinitEverything}!bootloaderMain.c@{bootloaderMain.c}}
+\doxysubsubsection{\texorpdfstring{deinitEverything()}{deinitEverything()}}
+{\footnotesize\ttfamily void deinit\+Everything (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{bootloader_main_8c_a46677f1496ee3f5c576bb791603ad181}\label{bootloader_main_8c_a46677f1496ee3f5c576bb791603ad181}} 
+\index{bootloaderMain.c@{bootloaderMain.c}!doFlashandSDfirmwarecontentsMatch@{doFlashandSDfirmwarecontentsMatch}}
+\index{doFlashandSDfirmwarecontentsMatch@{doFlashandSDfirmwarecontentsMatch}!bootloaderMain.c@{bootloaderMain.c}}
+\doxysubsubsection{\texorpdfstring{doFlashandSDfirmwarecontentsMatch()}{doFlashandSDfirmwarecontentsMatch()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} do\+Flashand\+SDfirmwarecontents\+Match (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{bootloader_main_8c_a7d4543e2ded0bd1d2da1ffae6dbfff86}\label{bootloader_main_8c_a7d4543e2ded0bd1d2da1ffae6dbfff86}} 
+\index{bootloaderMain.c@{bootloaderMain.c}!eraseFLASHappSpace@{eraseFLASHappSpace}}
+\index{eraseFLASHappSpace@{eraseFLASHappSpace}!bootloaderMain.c@{bootloaderMain.c}}
+\doxysubsubsection{\texorpdfstring{eraseFLASHappSpace()}{eraseFLASHappSpace()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} erase\+FLASHapp\+Space (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{bootloader_main_8c_ab9d6015915e86857d061d4f4e3a034c1}\label{bootloader_main_8c_ab9d6015915e86857d061d4f4e3a034c1}} 
+\index{bootloaderMain.c@{bootloaderMain.c}!isSDcardMounted@{isSDcardMounted}}
+\index{isSDcardMounted@{isSDcardMounted}!bootloaderMain.c@{bootloaderMain.c}}
+\doxysubsubsection{\texorpdfstring{isSDcardMounted()}{isSDcardMounted()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} is\+SDcard\+Mounted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{bootloader_main_8c_a51b01b9a7dc09793089182ed2854c313}\label{bootloader_main_8c_a51b01b9a7dc09793089182ed2854c313}} 
+\index{bootloaderMain.c@{bootloaderMain.c}!isthereafirmwarefile@{isthereafirmwarefile}}
+\index{isthereafirmwarefile@{isthereafirmwarefile}!bootloaderMain.c@{bootloaderMain.c}}
+\doxysubsubsection{\texorpdfstring{isthereafirmwarefile()}{isthereafirmwarefile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} isthereafirmwarefile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 10
+Here is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{bootloader_main_8c_aa49a0465ed710d7bea43b2e0a4f6a945}\label{bootloader_main_8c_aa49a0465ed710d7bea43b2e0a4f6a945}} 
+\index{bootloaderMain.c@{bootloaderMain.c}!isthereafirmwarefolder@{isthereafirmwarefolder}}
+\index{isthereafirmwarefolder@{isthereafirmwarefolder}!bootloaderMain.c@{bootloaderMain.c}}
+\doxysubsubsection{\texorpdfstring{isthereafirmwarefolder()}{isthereafirmwarefolder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} isthereafirmwarefolder (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{ff_8h_a03bdb8ce5895c7e261aadc2529637546}{TCHAR}} $\ast$}]{path }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 12
+Here is the caller graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{bootloader_main_8c_a00dc442d16eb0c90dd198e8808879454}\label{bootloader_main_8c_a00dc442d16eb0c90dd198e8808879454}} 
+\index{bootloaderMain.c@{bootloaderMain.c}!isThereFirmwarefile@{isThereFirmwarefile}}
+\index{isThereFirmwarefile@{isThereFirmwarefile}!bootloaderMain.c@{bootloaderMain.c}}
+\doxysubsubsection{\texorpdfstring{isThereFirmwarefile()}{isThereFirmwarefile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} is\+There\+Firmwarefile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 14
+Here is the caller graph for this function\+:
+% FIG 15
+\mbox{\Hypertarget{bootloader_main_8c_acbe4793c98f5c72fd4d58e3df85d2312}\label{bootloader_main_8c_acbe4793c98f5c72fd4d58e3df85d2312}} 
+\index{bootloaderMain.c@{bootloaderMain.c}!isthereSDcard@{isthereSDcard}}
+\index{isthereSDcard@{isthereSDcard}!bootloaderMain.c@{bootloaderMain.c}}
+\doxysubsubsection{\texorpdfstring{isthereSDcard()}{isthereSDcard()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} isthere\+SDcard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 16
+Here is the caller graph for this function\+:
+% FIG 17
+\mbox{\Hypertarget{bootloader_main_8c_a1ac0dd897f22b1f895670c8b55a3338c}\label{bootloader_main_8c_a1ac0dd897f22b1f895670c8b55a3338c}} 
+\index{bootloaderMain.c@{bootloaderMain.c}!jumpToApp@{jumpToApp}}
+\index{jumpToApp@{jumpToApp}!bootloaderMain.c@{bootloaderMain.c}}
+\doxysubsubsection{\texorpdfstring{jumpToApp()}{jumpToApp()}}
+{\footnotesize\ttfamily void jump\+To\+App (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 18
+Here is the caller graph for this function\+:
+% FIG 19
+\mbox{\Hypertarget{bootloader_main_8c_a7ee4693b04d0b0431767d7f4fa02d961}\label{bootloader_main_8c_a7ee4693b04d0b0431767d7f4fa02d961}} 
+\index{bootloaderMain.c@{bootloaderMain.c}!programfromRAMtoFLASH@{programfromRAMtoFLASH}}
+\index{programfromRAMtoFLASH@{programfromRAMtoFLASH}!bootloaderMain.c@{bootloaderMain.c}}
+\doxysubsubsection{\texorpdfstring{programfromRAMtoFLASH()}{programfromRAMtoFLASH()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} programfrom\+RAMto\+FLASH (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 20
+Here is the caller graph for this function\+:
+% FIG 21
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{bootloader_main_8c_a7685bebd1f91c9d87dfe7c28a154861b}\label{bootloader_main_8c_a7685bebd1f91c9d87dfe7c28a154861b}} 
+\index{bootloaderMain.c@{bootloaderMain.c}!buffer@{buffer}}
+\index{buffer@{buffer}!bootloaderMain.c@{bootloaderMain.c}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily char buffer\mbox{[}\mbox{\hyperlink{bootloader_main_8c_a2076cddaaefe04cd6faffa7624f39f00}{APPsize}}\mbox{]} =\{0\}}
+
+\mbox{\Hypertarget{bootloader_main_8c_ad55a148f17a6dfac70d53442873a5502}\label{bootloader_main_8c_ad55a148f17a6dfac70d53442873a5502}} 
+\index{bootloaderMain.c@{bootloaderMain.c}!directory@{directory}}
+\index{directory@{directory}!bootloaderMain.c@{bootloaderMain.c}}
+\doxysubsubsection{\texorpdfstring{directory}{directory}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_d_i_r}{DIR}} directory}
+
+\mbox{\Hypertarget{bootloader_main_8c_a169b9b8fac1f35114c4f382bff890c3b}\label{bootloader_main_8c_a169b9b8fac1f35114c4f382bff890c3b}} 
+\index{bootloaderMain.c@{bootloaderMain.c}!directorypath@{directorypath}}
+\index{directorypath@{directorypath}!bootloaderMain.c@{bootloaderMain.c}}
+\doxysubsubsection{\texorpdfstring{directorypath}{directorypath}}
+{\footnotesize\ttfamily const char directorypath\mbox{[}$\,$\mbox{]} =\char`\"{}firmware\+\_\+folder\char`\"{}}
+
+\mbox{\Hypertarget{bootloader_main_8c_ac72abd22c77f07d25bed1af446a22f47}\label{bootloader_main_8c_ac72abd22c77f07d25bed1af446a22f47}} 
+\index{bootloaderMain.c@{bootloaderMain.c}!filinfo@{filinfo}}
+\index{filinfo@{filinfo}!bootloaderMain.c@{bootloaderMain.c}}
+\doxysubsubsection{\texorpdfstring{filinfo}{filinfo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_f_i_l_i_n_f_o}{FILINFO}} filinfo}
+
+\mbox{\Hypertarget{bootloader_main_8c_ae5bcde72e0e0b29ec86d00ba3e5cd51f}\label{bootloader_main_8c_ae5bcde72e0e0b29ec86d00ba3e5cd51f}} 
+\index{bootloaderMain.c@{bootloaderMain.c}!fs@{fs}}
+\index{fs@{fs}!bootloaderMain.c@{bootloaderMain.c}}
+\doxysubsubsection{\texorpdfstring{fs}{fs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_f_a_t_f_s}{FATFS}} fs}
+
+\mbox{\Hypertarget{bootloader_main_8c_a04e69e581f6965b3c50ad1874a6b604e}\label{bootloader_main_8c_a04e69e581f6965b3c50ad1874a6b604e}} 
+\index{bootloaderMain.c@{bootloaderMain.c}!fullfilepath@{fullfilepath}}
+\index{fullfilepath@{fullfilepath}!bootloaderMain.c@{bootloaderMain.c}}
+\doxysubsubsection{\texorpdfstring{fullfilepath}{fullfilepath}}
+{\footnotesize\ttfamily char fullfilepath\mbox{[}100\mbox{]} =\{0\}}
+
+\mbox{\Hypertarget{bootloader_main_8c_a2dfa7a2488da4cfb0055c9cf4e47a1d4}\label{bootloader_main_8c_a2dfa7a2488da4cfb0055c9cf4e47a1d4}} 
+\index{bootloaderMain.c@{bootloaderMain.c}!myFILE@{myFILE}}
+\index{myFILE@{myFILE}!bootloaderMain.c@{bootloaderMain.c}}
+\doxysubsubsection{\texorpdfstring{myFILE}{myFILE}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_f_i_l}{FIL}} my\+FILE}
+
+\mbox{\Hypertarget{bootloader_main_8c_a997cca28dbf70dc07b4dd0a1567f190b}\label{bootloader_main_8c_a997cca28dbf70dc07b4dd0a1567f190b}} 
+\index{bootloaderMain.c@{bootloaderMain.c}!stat@{stat}}
+\index{stat@{stat}!bootloaderMain.c@{bootloaderMain.c}}
+\doxysubsubsection{\texorpdfstring{stat}{stat}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ff_8h_a49d0171ecbd362cda5680a0d360db44c}{FRESULT}} stat}
+
+\mbox{\Hypertarget{bootloader_main_8c_a583d18a854cefaad5dad4c7b2e7a8ccb}\label{bootloader_main_8c_a583d18a854cefaad5dad4c7b2e7a8ccb}} 
+\index{bootloaderMain.c@{bootloaderMain.c}!testByte@{testByte}}
+\index{testByte@{testByte}!bootloaderMain.c@{bootloaderMain.c}}
+\doxysubsubsection{\texorpdfstring{testByte}{testByte}}
+{\footnotesize\ttfamily \mbox{\hyperlink{integer_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}} test\+Byte}
+

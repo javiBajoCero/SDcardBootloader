@@ -1,0 +1,125 @@
+\hypertarget{bootloader_main_8h}{}\doxysection{/home/runner/work/\+SDcard\+Bootloader/\+SDcard\+Bootloader/bootloader/\+Core/\+Inc/bootloader\+Main.h File Reference}
+\label{bootloader_main_8h}\index{/home/runner/work/SDcardBootloader/SDcardBootloader/bootloader/Core/Inc/bootloaderMain.h@{/home/runner/work/SDcardBootloader/SDcardBootloader/bootloader/Core/Inc/bootloaderMain.h}}
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+Include dependency graph for bootloader\+Main.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{bootloader_main_8h_af20710dc7ac4b9152e5552ebe0bb1327}{main\+APPstart\+Flash\+Addr}}~0x8010000
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} \{ \mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01a99f136a862ba5c7d16967231c29f09d6}{YES}} =1
+, \mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01a0d077f5b932ce05e5b9f30c6087a2f31}{NO}} =0
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} \mbox{\hyperlink{bootloader_main_8h_acbe4793c98f5c72fd4d58e3df85d2312}{isthere\+SDcard}} ()
+\item 
+\mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} \mbox{\hyperlink{bootloader_main_8h_a00dc442d16eb0c90dd198e8808879454}{is\+There\+Firmwarefile}} ()
+\item 
+\mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} \mbox{\hyperlink{bootloader_main_8h_a46677f1496ee3f5c576bb791603ad181}{do\+Flashand\+SDfirmwarecontents\+Match}} ()
+\item 
+void \mbox{\hyperlink{bootloader_main_8h_a1ac0dd897f22b1f895670c8b55a3338c}{jump\+To\+App}} ()
+\item 
+\mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} \mbox{\hyperlink{bootloader_main_8h_a7d4543e2ded0bd1d2da1ffae6dbfff86}{erase\+FLASHapp\+Space}} ()
+\item 
+\mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} \mbox{\hyperlink{bootloader_main_8h_a7ee4693b04d0b0431767d7f4fa02d961}{programfrom\+RAMto\+FLASH}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{bootloader_main_8h_af20710dc7ac4b9152e5552ebe0bb1327}\label{bootloader_main_8h_af20710dc7ac4b9152e5552ebe0bb1327}} 
+\index{bootloaderMain.h@{bootloaderMain.h}!mainAPPstartFlashAddr@{mainAPPstartFlashAddr}}
+\index{mainAPPstartFlashAddr@{mainAPPstartFlashAddr}!bootloaderMain.h@{bootloaderMain.h}}
+\doxysubsubsection{\texorpdfstring{mainAPPstartFlashAddr}{mainAPPstartFlashAddr}}
+{\footnotesize\ttfamily \#define main\+APPstart\+Flash\+Addr~0x8010000}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}\label{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}} 
+\index{bootloaderMain.h@{bootloaderMain.h}!BootloaderLogicEnum@{BootloaderLogicEnum}}
+\index{BootloaderLogicEnum@{BootloaderLogicEnum}!bootloaderMain.h@{bootloaderMain.h}}
+\doxysubsubsection{\texorpdfstring{BootloaderLogicEnum}{BootloaderLogicEnum}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{YES@{YES}!bootloaderMain.h@{bootloaderMain.h}}\index{bootloaderMain.h@{bootloaderMain.h}!YES@{YES}}}\mbox{\Hypertarget{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01a99f136a862ba5c7d16967231c29f09d6}\label{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01a99f136a862ba5c7d16967231c29f09d6}} 
+YES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NO@{NO}!bootloaderMain.h@{bootloaderMain.h}}\index{bootloaderMain.h@{bootloaderMain.h}!NO@{NO}}}\mbox{\Hypertarget{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01a0d077f5b932ce05e5b9f30c6087a2f31}\label{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01a0d077f5b932ce05e5b9f30c6087a2f31}} 
+NO&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{bootloader_main_8h_a46677f1496ee3f5c576bb791603ad181}\label{bootloader_main_8h_a46677f1496ee3f5c576bb791603ad181}} 
+\index{bootloaderMain.h@{bootloaderMain.h}!doFlashandSDfirmwarecontentsMatch@{doFlashandSDfirmwarecontentsMatch}}
+\index{doFlashandSDfirmwarecontentsMatch@{doFlashandSDfirmwarecontentsMatch}!bootloaderMain.h@{bootloaderMain.h}}
+\doxysubsubsection{\texorpdfstring{doFlashandSDfirmwarecontentsMatch()}{doFlashandSDfirmwarecontentsMatch()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} do\+Flashand\+SDfirmwarecontents\+Match (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{bootloader_main_8h_a7d4543e2ded0bd1d2da1ffae6dbfff86}\label{bootloader_main_8h_a7d4543e2ded0bd1d2da1ffae6dbfff86}} 
+\index{bootloaderMain.h@{bootloaderMain.h}!eraseFLASHappSpace@{eraseFLASHappSpace}}
+\index{eraseFLASHappSpace@{eraseFLASHappSpace}!bootloaderMain.h@{bootloaderMain.h}}
+\doxysubsubsection{\texorpdfstring{eraseFLASHappSpace()}{eraseFLASHappSpace()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} erase\+FLASHapp\+Space (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{bootloader_main_8h_a00dc442d16eb0c90dd198e8808879454}\label{bootloader_main_8h_a00dc442d16eb0c90dd198e8808879454}} 
+\index{bootloaderMain.h@{bootloaderMain.h}!isThereFirmwarefile@{isThereFirmwarefile}}
+\index{isThereFirmwarefile@{isThereFirmwarefile}!bootloaderMain.h@{bootloaderMain.h}}
+\doxysubsubsection{\texorpdfstring{isThereFirmwarefile()}{isThereFirmwarefile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} is\+There\+Firmwarefile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{bootloader_main_8h_acbe4793c98f5c72fd4d58e3df85d2312}\label{bootloader_main_8h_acbe4793c98f5c72fd4d58e3df85d2312}} 
+\index{bootloaderMain.h@{bootloaderMain.h}!isthereSDcard@{isthereSDcard}}
+\index{isthereSDcard@{isthereSDcard}!bootloaderMain.h@{bootloaderMain.h}}
+\doxysubsubsection{\texorpdfstring{isthereSDcard()}{isthereSDcard()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} isthere\+SDcard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{bootloader_main_8h_a1ac0dd897f22b1f895670c8b55a3338c}\label{bootloader_main_8h_a1ac0dd897f22b1f895670c8b55a3338c}} 
+\index{bootloaderMain.h@{bootloaderMain.h}!jumpToApp@{jumpToApp}}
+\index{jumpToApp@{jumpToApp}!bootloaderMain.h@{bootloaderMain.h}}
+\doxysubsubsection{\texorpdfstring{jumpToApp()}{jumpToApp()}}
+{\footnotesize\ttfamily void jump\+To\+App (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 10
+Here is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{bootloader_main_8h_a7ee4693b04d0b0431767d7f4fa02d961}\label{bootloader_main_8h_a7ee4693b04d0b0431767d7f4fa02d961}} 
+\index{bootloaderMain.h@{bootloaderMain.h}!programfromRAMtoFLASH@{programfromRAMtoFLASH}}
+\index{programfromRAMtoFLASH@{programfromRAMtoFLASH}!bootloaderMain.h@{bootloaderMain.h}}
+\doxysubsubsection{\texorpdfstring{programfromRAMtoFLASH()}{programfromRAMtoFLASH()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{bootloader_main_8h_a175071b8c0e8b47fde464405a3112b01}{Bootloader\+Logic\+Enum}} programfrom\+RAMto\+FLASH (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 12
+Here is the caller graph for this function\+:
+% FIG 13

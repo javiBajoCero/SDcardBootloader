@@ -1,0 +1,23 @@
+digraph "/home/runner/work/SDcardBootloader/SDcardBootloader/bootloader/FATFS" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_ca60b63f767f5225bc4631228c3dc823 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_ca60b63f767f5225bc4631228c3dc823.html"];
+    dir_ca60b63f767f5225bc4631228c3dc823 [shape=plaintext label="FATFS"];
+  dir_3980504b3adf1042ed6243fb396e0cfb [shape=box label="App" fillcolor="white" style="filled" URL="dir_3980504b3adf1042ed6243fb396e0cfb.html"];
+  dir_456a9e298739d9e400611b6af5d9aad0 [shape=box label="Target" fillcolor="white" style="filled" URL="dir_456a9e298739d9e400611b6af5d9aad0.html"];
+  }
+  dir_18d39804a75e1fcb1deadc3198692f5c [shape=box label="Middlewares" fillcolor="white" style="filled" color="red" URL="dir_18d39804a75e1fcb1deadc3198692f5c.html"];
+  dir_60925fc218da8ca7908795bf5f624060 [shape=box label="Drivers" fillcolor="white" style="filled" color="red" URL="dir_60925fc218da8ca7908795bf5f624060.html"];
+  dir_c6310732a22f63c0c2fc5595561e68f1 [shape=box label="Core" fillcolor="white" style="filled" color="red" URL="dir_c6310732a22f63c0c2fc5595561e68f1.html"];
+  dir_60925fc218da8ca7908795bf5f624060->dir_c6310732a22f63c0c2fc5595561e68f1 [headlabel="1", labeldistance=1.5 headhref="dir_000018_000000.html"];
+  dir_c6310732a22f63c0c2fc5595561e68f1->dir_60925fc218da8ca7908795bf5f624060 [headlabel="12", labeldistance=1.5 headhref="dir_000000_000018.html"];
+  dir_c6310732a22f63c0c2fc5595561e68f1->dir_3980504b3adf1042ed6243fb396e0cfb [headlabel="2", labeldistance=1.5 headhref="dir_000000_000030.html"];
+  dir_3980504b3adf1042ed6243fb396e0cfb->dir_18d39804a75e1fcb1deadc3198692f5c [headlabel="2", labeldistance=1.5 headhref="dir_000030_000032.html"];
+  dir_3980504b3adf1042ed6243fb396e0cfb->dir_456a9e298739d9e400611b6af5d9aad0 [headlabel="1", labeldistance=1.5 headhref="dir_000030_000031.html"];
+  dir_18d39804a75e1fcb1deadc3198692f5c->dir_456a9e298739d9e400611b6af5d9aad0 [headlabel="1", labeldistance=1.5 headhref="dir_000032_000031.html"];
+  dir_456a9e298739d9e400611b6af5d9aad0->dir_18d39804a75e1fcb1deadc3198692f5c [headlabel="1", labeldistance=1.5 headhref="dir_000031_000032.html"];
+  dir_456a9e298739d9e400611b6af5d9aad0->dir_60925fc218da8ca7908795bf5f624060 [headlabel="3", labeldistance=1.5 headhref="dir_000031_000018.html"];
+  dir_456a9e298739d9e400611b6af5d9aad0->dir_c6310732a22f63c0c2fc5595561e68f1 [headlabel="1", labeldistance=1.5 headhref="dir_000031_000000.html"];
+}

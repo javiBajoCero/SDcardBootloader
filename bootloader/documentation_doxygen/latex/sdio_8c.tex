@@ -1,0 +1,86 @@
+\hypertarget{sdio_8c}{}\doxysection{/home/runner/work/\+SDcard\+Bootloader/\+SDcard\+Bootloader/bootloader/\+Core/\+Src/sdio.c File Reference}
+\label{sdio_8c}\index{/home/runner/work/SDcardBootloader/SDcardBootloader/bootloader/Core/Src/sdio.c@{/home/runner/work/SDcardBootloader/SDcardBootloader/bootloader/Core/Src/sdio.c}}
+
+
+This file provides code for the configuration of the SDIO instances.  
+
+
+{\ttfamily \#include \char`\"{}sdio.\+h\char`\"{}}\newline
+Include dependency graph for sdio.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{sdio_8c_a4e76294e27e4d4955797651c4e2bb278}{MX\+\_\+\+SDIO\+\_\+\+SD\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{sdio_8c_a3fb8da589f9c19bb61e051dfc0ccbdd3}{HAL\+\_\+\+SD\+\_\+\+Msp\+Init}} (SD\+\_\+\+Handle\+Type\+Def $\ast$sd\+Handle)
+\item 
+void \mbox{\hyperlink{sdio_8c_acafafee9f1c5f66225de3dea76ce80c8}{HAL\+\_\+\+SD\+\_\+\+Msp\+De\+Init}} (SD\+\_\+\+Handle\+Type\+Def $\ast$sd\+Handle)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+SD\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{sdio_8c_ae81fa362038e2e56bce3dd2e6416c78e}{hsd}}
+\item 
+\mbox{\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{DMA\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{sdio_8c_adb8978634f4a0fd26c3d9d39cc63d490}{hdma\+\_\+sdio\+\_\+rx}}
+\item 
+\mbox{\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{DMA\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{sdio_8c_aa83f62f831cb1aa0d1005e9dcc0c275d}{hdma\+\_\+sdio\+\_\+tx}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides code for the configuration of the SDIO instances. 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2023 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sdio_8c_acafafee9f1c5f66225de3dea76ce80c8}\label{sdio_8c_acafafee9f1c5f66225de3dea76ce80c8}} 
+\index{sdio.c@{sdio.c}!HAL\_SD\_MspDeInit@{HAL\_SD\_MspDeInit}}
+\index{HAL\_SD\_MspDeInit@{HAL\_SD\_MspDeInit}!sdio.c@{sdio.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_SD\_MspDeInit()}{HAL\_SD\_MspDeInit()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+SD\+\_\+\+Msp\+De\+Init (\begin{DoxyParamCaption}\item[{SD\+\_\+\+Handle\+Type\+Def $\ast$}]{sd\+Handle }\end{DoxyParamCaption})}
+
+SDIO GPIO Configuration PC8 -\/-\/-\/---$>$ SDIO\+\_\+\+D0 PC9 -\/-\/-\/---$>$ SDIO\+\_\+\+D1 PC10 -\/-\/-\/---$>$ SDIO\+\_\+\+D2 PC11 -\/-\/-\/---$>$ SDIO\+\_\+\+D3 PC12 -\/-\/-\/---$>$ SDIO\+\_\+\+CK PD2 -\/-\/-\/---$>$ SDIO\+\_\+\+CMDHere is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{sdio_8c_a3fb8da589f9c19bb61e051dfc0ccbdd3}\label{sdio_8c_a3fb8da589f9c19bb61e051dfc0ccbdd3}} 
+\index{sdio.c@{sdio.c}!HAL\_SD\_MspInit@{HAL\_SD\_MspInit}}
+\index{HAL\_SD\_MspInit@{HAL\_SD\_MspInit}!sdio.c@{sdio.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_SD\_MspInit()}{HAL\_SD\_MspInit()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+SD\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{SD\+\_\+\+Handle\+Type\+Def $\ast$}]{sd\+Handle }\end{DoxyParamCaption})}
+
+SDIO GPIO Configuration PC8 -\/-\/-\/---$>$ SDIO\+\_\+\+D0 PC9 -\/-\/-\/---$>$ SDIO\+\_\+\+D1 PC10 -\/-\/-\/---$>$ SDIO\+\_\+\+D2 PC11 -\/-\/-\/---$>$ SDIO\+\_\+\+D3 PC12 -\/-\/-\/---$>$ SDIO\+\_\+\+CK PD2 -\/-\/-\/---$>$ SDIO\+\_\+\+CMDHere is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{sdio_8c_a4e76294e27e4d4955797651c4e2bb278}\label{sdio_8c_a4e76294e27e4d4955797651c4e2bb278}} 
+\index{sdio.c@{sdio.c}!MX\_SDIO\_SD\_Init@{MX\_SDIO\_SD\_Init}}
+\index{MX\_SDIO\_SD\_Init@{MX\_SDIO\_SD\_Init}!sdio.c@{sdio.c}}
+\doxysubsubsection{\texorpdfstring{MX\_SDIO\_SD\_Init()}{MX\_SDIO\_SD\_Init()}}
+{\footnotesize\ttfamily void MX\+\_\+\+SDIO\+\_\+\+SD\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{sdio_8c_adb8978634f4a0fd26c3d9d39cc63d490}\label{sdio_8c_adb8978634f4a0fd26c3d9d39cc63d490}} 
+\index{sdio.c@{sdio.c}!hdma\_sdio\_rx@{hdma\_sdio\_rx}}
+\index{hdma\_sdio\_rx@{hdma\_sdio\_rx}!sdio.c@{sdio.c}}
+\doxysubsubsection{\texorpdfstring{hdma\_sdio\_rx}{hdma\_sdio\_rx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{DMA\+\_\+\+Handle\+Type\+Def}} hdma\+\_\+sdio\+\_\+rx}
+
+\mbox{\Hypertarget{sdio_8c_aa83f62f831cb1aa0d1005e9dcc0c275d}\label{sdio_8c_aa83f62f831cb1aa0d1005e9dcc0c275d}} 
+\index{sdio.c@{sdio.c}!hdma\_sdio\_tx@{hdma\_sdio\_tx}}
+\index{hdma\_sdio\_tx@{hdma\_sdio\_tx}!sdio.c@{sdio.c}}
+\doxysubsubsection{\texorpdfstring{hdma\_sdio\_tx}{hdma\_sdio\_tx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{DMA\+\_\+\+Handle\+Type\+Def}} hdma\+\_\+sdio\+\_\+tx}
+
+\mbox{\Hypertarget{sdio_8c_ae81fa362038e2e56bce3dd2e6416c78e}\label{sdio_8c_ae81fa362038e2e56bce3dd2e6416c78e}} 
+\index{sdio.c@{sdio.c}!hsd@{hsd}}
+\index{hsd@{hsd}!sdio.c@{sdio.c}}
+\doxysubsubsection{\texorpdfstring{hsd}{hsd}}
+{\footnotesize\ttfamily SD\+\_\+\+Handle\+Type\+Def hsd}
+

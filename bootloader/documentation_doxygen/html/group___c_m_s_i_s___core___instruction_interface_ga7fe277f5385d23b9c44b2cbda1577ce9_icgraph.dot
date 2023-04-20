@@ -1,0 +1,38 @@
+digraph "__DSB"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="__DSB",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Data Synchronization Barrier."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="__NVIC_DisableIRQ",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___c_m_s_i_s___core___n_v_i_c_functions.html#gae016e4c1986312044ee768806537d52f",tooltip="Disable Interrupt."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="__NVIC_SystemReset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___c_m_s_i_s___core___n_v_i_c_functions.html#ga0d9aa2d30fa54b41eb780c16e35b676c",tooltip="System Reset."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ARM_MPU_Disable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mpu__armv7_8h.html#a61814eba4652a0fdfb76bbe222086327",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="ARM_MPU_Enable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mpu__armv7_8h.html#a5a3f40314553baccdeea551f86d9a997",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="SCB_CleanDCache",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___c_m_s_i_s___core___cache_functions.html#ga55583e3065c6eabca204b8b89b121c4c",tooltip="Clean D-Cache."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="SCB_CleanDCache_by_Addr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___c_m_s_i_s___core___cache_functions.html#ga696fadbf7b9cc71dad42fab61873a40d",tooltip="D-Cache Clean by address."];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="SCB_CleanInvalidateDCache",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___c_m_s_i_s___core___cache_functions.html#ga1b741def9e3b2ca97dc9ea49b8ce505c",tooltip="Clean & Invalidate D-Cache."];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="SCB_CleanInvalidateDCache\l_by_Addr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___c_m_s_i_s___core___cache_functions.html#ga630131b2572eaa16b569ed364dfc895e",tooltip="D-Cache Clean and Invalidate by address."];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="SCB_DisableDCache",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___c_m_s_i_s___core___cache_functions.html#ga6468170f90d270caab8116e7a4f0b5fe",tooltip="Disable D-Cache."];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="SCB_DisableICache",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___c_m_s_i_s___core___cache_functions.html#gaba757390852f95b3ac2d8638c717d8d8",tooltip="Disable I-Cache."];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="SCB_EnableDCache",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___c_m_s_i_s___core___cache_functions.html#ga63aa640d9006021a796a5dcf9c7180b6",tooltip="Enable D-Cache."];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="SCB_EnableICache",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___c_m_s_i_s___core___cache_functions.html#gaf9e7c6c8e16ada1f95e5bf5a03505b68",tooltip="Enable I-Cache."];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="SCB_InvalidateDCache",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___c_m_s_i_s___core___cache_functions.html#gace2d30db08887d0bdb818b8a785a5ce6",tooltip="Invalidate D-Cache."];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="SCB_InvalidateDCache\l_by_Addr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___c_m_s_i_s___core___cache_functions.html#ga503ef7ef58c0773defd15a82f6336c09",tooltip="D-Cache Invalidate by address."];
+  Node1 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="SCB_InvalidateICache",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___c_m_s_i_s___core___cache_functions.html#ga50d373a785edd782c5de5a3b55e30ff3",tooltip="Invalidate I-Cache."];
+}

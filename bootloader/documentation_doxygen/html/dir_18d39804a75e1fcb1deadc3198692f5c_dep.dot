@@ -1,0 +1,13 @@
+digraph "/home/runner/work/SDcardBootloader/SDcardBootloader/bootloader/Middlewares" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_18d39804a75e1fcb1deadc3198692f5c {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_18d39804a75e1fcb1deadc3198692f5c.html"];
+    dir_18d39804a75e1fcb1deadc3198692f5c [shape=plaintext label="Middlewares"];
+  dir_d908beb048a5c6f6b12f1f04de3a2254 [shape=box label="Third_Party" fillcolor="white" style="filled" color="red" URL="dir_d908beb048a5c6f6b12f1f04de3a2254.html"];
+  }
+  dir_ca60b63f767f5225bc4631228c3dc823 [shape=box label="FATFS" fillcolor="white" style="filled" color="red" URL="dir_ca60b63f767f5225bc4631228c3dc823.html"];
+  dir_ca60b63f767f5225bc4631228c3dc823->dir_d908beb048a5c6f6b12f1f04de3a2254 [headlabel="3", labeldistance=1.5 headhref="dir_000029_000033.html"];
+  dir_d908beb048a5c6f6b12f1f04de3a2254->dir_ca60b63f767f5225bc4631228c3dc823 [headlabel="1", labeldistance=1.5 headhref="dir_000033_000029.html"];
+}

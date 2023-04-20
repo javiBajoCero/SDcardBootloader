@@ -1,0 +1,26 @@
+digraph "/home/runner/work/SDcardBootloader/SDcardBootloader/bootloader/Middlewares/Third_Party/FatFs/src/diskio.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/Middlewares/Third\l_Party/FatFs/src/diskio.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/Middlewares/Third\l_Party/FatFs/src/diskio.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$diskio_8c.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/Middlewares/Third\l_Party/FatFs/src/ff.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ff_8c.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/Middlewares/Third\l_Party/FatFs/src/ff_gen_drv.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ff__gen__drv_8h.html",tooltip="Header for ff_gen_drv.c module."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/FATFS/App/fatfs.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fatfs_8h.html",tooltip="Header for fatfs applications."];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/Core/Src/bootloaderMain.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootloader_main_8c.html",tooltip=" "];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/Core/Src/main.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8c.html",tooltip=": Main program body"];
+  Node5 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/FATFS/App/fatfs.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fatfs_8c.html",tooltip="Code for fatfs applications."];
+  Node4 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/FATFS/Target/sd\l_diskio.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sd__diskio_8c.html",tooltip="SD Disk I/O driver."];
+  Node4 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="/home/runner/work/SDcard\lBootloader/SDcardBootloader\l/bootloader/Middlewares/Third\l_Party/FatFs/src/ff_gen_drv.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ff__gen__drv_8c.html",tooltip="FatFs generic low level driver."];
+}

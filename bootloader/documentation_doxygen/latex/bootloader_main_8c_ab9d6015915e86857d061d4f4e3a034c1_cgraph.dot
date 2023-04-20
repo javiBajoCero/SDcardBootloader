@@ -1,0 +1,26 @@
+digraph "isSDcardMounted"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="isSDcardMounted",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="BSP_SD_Init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bsp__driver__sd_8c.html#afe208758d02f97e12c2eecbf604c1726",tooltip="Initializes the SD card device."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="BSP_SD_IsDetected",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bsp__driver__sd_8c.html#a80c0a2c6722e29b76aa3e3d8a57ee27a",tooltip="Detects if SD card is correctly plugged in the memory slot or not."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="BSP_PlatformIsDetected",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fatfs__platform_8c.html#aa64443bad1703927b76af9ab0ddd443d",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="HAL_GPIO_ReadPin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___g_p_i_o___exported___functions___group2.html#gaf2b819ea6551319ddd5670db318d2e4e",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="f_mount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ff_8c.html#a16a934c2bbfa2160295810adc49d5509",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="FATFS_LinkDriver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ff__gen__drv_8c.html#a95dad42ba07bb7d48cb5fb5fd3c8ef6f",tooltip="Links a compatible diskio driver and increments the number of active linked drivers."];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="FATFS_LinkDriverEx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ff__gen__drv_8c.html#a98c3c80319173c9925bbeddd2ebe55f0",tooltip="Links a compatible diskio driver/lun id and increments the number of active linked drivers."];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="FATFS_UnLinkDriver",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ff__gen__drv_8c.html#a5f457aa4e15830f4c77a9fa766f761d3",tooltip="Unlinks a diskio driver and decrements the number of active linked drivers."];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="FATFS_UnLinkDriverEx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ff__gen__drv_8c.html#a6ee487f56c0548d0da207dcbbe9bfe14",tooltip="Unlinks a diskio driver and decrements the number of active linked drivers."];
+}

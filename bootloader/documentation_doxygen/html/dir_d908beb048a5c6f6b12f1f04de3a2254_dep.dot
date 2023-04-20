@@ -1,0 +1,16 @@
+digraph "/home/runner/work/SDcardBootloader/SDcardBootloader/bootloader/Middlewares/Third_Party" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_18d39804a75e1fcb1deadc3198692f5c {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Middlewares" fontname="Helvetica", fontsize="10", URL="dir_18d39804a75e1fcb1deadc3198692f5c.html"]
+  subgraph clusterdir_d908beb048a5c6f6b12f1f04de3a2254 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_d908beb048a5c6f6b12f1f04de3a2254.html"];
+    dir_d908beb048a5c6f6b12f1f04de3a2254 [shape=plaintext label="Third_Party"];
+  dir_9098ac271282d6be976eb2584a04771f [shape=box label="FatFs" fillcolor="white" style="filled" color="red" URL="dir_9098ac271282d6be976eb2584a04771f.html"];
+  }
+  }
+  dir_ca60b63f767f5225bc4631228c3dc823 [shape=box label="FATFS" fillcolor="white" style="filled" color="red" URL="dir_ca60b63f767f5225bc4631228c3dc823.html"];
+  dir_9098ac271282d6be976eb2584a04771f->dir_ca60b63f767f5225bc4631228c3dc823 [headlabel="1", labeldistance=1.5 headhref="dir_000034_000029.html"];
+  dir_ca60b63f767f5225bc4631228c3dc823->dir_9098ac271282d6be976eb2584a04771f [headlabel="3", labeldistance=1.5 headhref="dir_000029_000034.html"];
+}

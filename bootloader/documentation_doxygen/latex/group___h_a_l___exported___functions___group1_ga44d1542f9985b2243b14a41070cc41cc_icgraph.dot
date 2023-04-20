@@ -1,0 +1,14 @@
+digraph "HAL_InitTick"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="HAL_InitTick",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="This function configures the source of the time base. The time source is configured to have 1ms time ..."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="HAL_Init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___h_a_l___exported___functions___group1.html#gaecac54d350c3730e6831eb404e557dc4",tooltip="This function is used to initialize the HAL Library; it must be the first instruction to be executed ..."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe",tooltip="The application entry point."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="HAL_SetTickFreq",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___h_a_l___exported___functions___group2.html#ga47f2dd240b2aed823a76b11496f37690",tooltip="Set new tick Freq."];
+}

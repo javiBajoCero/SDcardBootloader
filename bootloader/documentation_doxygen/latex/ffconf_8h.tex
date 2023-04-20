@@ -1,0 +1,319 @@
+\hypertarget{ffconf_8h}{}\doxysection{/home/runner/work/\+SDcard\+Bootloader/\+SDcard\+Bootloader/bootloader/\+FATFS/\+Target/ffconf.h File Reference}
+\label{ffconf_8h}\index{/home/runner/work/SDcardBootloader/SDcardBootloader/bootloader/FATFS/Target/ffconf.h@{/home/runner/work/SDcardBootloader/SDcardBootloader/bootloader/FATFS/Target/ffconf.h}}
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bsp\+\_\+driver\+\_\+sd.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for ffconf.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_a45082af332369ed49492446a2d4d4c5a}{\+\_\+\+FFCONF}}~68300 /$\ast$ Revision ID $\ast$/
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_afb8d35370cfe0c23832ac2d82e854ec6}{\+\_\+\+FS\+\_\+\+READONLY}}~0      /$\ast$ 0\+:Read/Write or 1\+:Read only $\ast$/
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_abefed32e4f049538ff7d7101cd8e3643}{\+\_\+\+FS\+\_\+\+MINIMIZE}}~0      /$\ast$ 0 to 3 $\ast$/
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_aaab0313f867bb008b64236239f5c2660}{\+\_\+\+USE\+\_\+\+STRFUNC}}~2      /$\ast$ 0\+:Disable or 1-\/2\+:Enable $\ast$/
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_abf97f960987a4a2be3b876cc45612b06}{\+\_\+\+USE\+\_\+\+FIND}}~1
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_a62cdce547af40f0c1599698ee151bbd7}{\+\_\+\+USE\+\_\+\+MKFS}}~1
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_a85f4bdb33729ebdaaf9edeec948ac0e7}{\+\_\+\+USE\+\_\+\+FASTSEEK}}~1
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_a89e14a6d520a11044b87a947e83a5acb}{\+\_\+\+USE\+\_\+\+EXPAND}}~0
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_adff028cbd80032c637fe1bb4e9b6fdfd}{\+\_\+\+USE\+\_\+\+CHMOD}}~0
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_a281a4fc4668e40fc896fc865f52f9421}{\+\_\+\+USE\+\_\+\+LABEL}}~0
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_ae49b948c9a92ff7082b88bd36f63d988}{\+\_\+\+USE\+\_\+\+FORWARD}}~0
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_aaf9b5cee569d93f1ebe43ea70916569f}{\+\_\+\+CODE\+\_\+\+PAGE}}~850
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_ae471cce284bf1888f9e991f5a811fc11}{\+\_\+\+USE\+\_\+\+LFN}}~2    /$\ast$ 0 to 3 $\ast$/
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_a14e73a5c703a586c614b3e40b849f82c}{\+\_\+\+MAX\+\_\+\+LFN}}~255  /$\ast$ Maximum LFN length to handle (12 to 255) $\ast$/
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_a8dd7e7f166bb146970b394d53cf01d80}{\+\_\+\+LFN\+\_\+\+UNICODE}}~0 /$\ast$ 0\+:ANSI/OEM or 1\+:Unicode $\ast$/
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_a36a53af63e05351562e34f082eec3f33}{\+\_\+\+STRF\+\_\+\+ENCODE}}~3
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_a52faf11025401372f71e9d81905b7af4}{\+\_\+\+FS\+\_\+\+RPATH}}~0 /$\ast$ 0 to 2 $\ast$/
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_a366da9a40c8ceb3103a6b72ca02b9969}{\+\_\+\+VOLUMES}}~1
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_ae89b13dba7638cb22b5587fcb335ffe3}{\+\_\+\+STR\+\_\+\+VOLUME\+\_\+\+ID}}~0 /$\ast$ 0\+:Use only 0-\/9 for drive ID, 1\+:Use strings for drive ID $\ast$/
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_a75c97afb8b06935364e42e3ec3fdc6c4}{\+\_\+\+VOLUME\+\_\+\+STRS}}~\char`\"{}RAM\char`\"{},\char`\"{}NAND\char`\"{},\char`\"{}CF\char`\"{},\char`\"{}SD1\char`\"{},\char`\"{}SD2\char`\"{},\char`\"{}USB1\char`\"{},\char`\"{}USB2\char`\"{},\char`\"{}USB3\char`\"{}
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_adc02609ba893fe8706a2f8af0e3a3bb5}{\+\_\+\+MULTI\+\_\+\+PARTITION}}~0 /$\ast$ 0\+:Single partition, 1\+:Multiple partition $\ast$/
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_ad03aa6d0e294709ae15898ee2c14dc3a}{\+\_\+\+MIN\+\_\+\+SS}}~512  /$\ast$ 512, 1024, 2048 or 4096 $\ast$/
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_ac271b697378912f17132cb9c7d0de024}{\+\_\+\+MAX\+\_\+\+SS}}~4096  /$\ast$ 512, 1024, 2048 or 4096 $\ast$/
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_a1f93ee7e57bb9d1221f34bfe80e18a61}{\+\_\+\+USE\+\_\+\+TRIM}}~0
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_aaa0caa2085332d2febf0e392559ad138}{\+\_\+\+FS\+\_\+\+NOFSINFO}}~0 /$\ast$ 0,1,2 or 3 $\ast$/
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_aa21b30e70610594d3af3a28832b584f6}{\+\_\+\+FS\+\_\+\+TINY}}~0      /$\ast$ 0\+:Normal or 1\+:Tiny $\ast$/
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_a104309dc91be2af9375923ed7b03490e}{\+\_\+\+FS\+\_\+\+EXFAT}}~0
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_a851cace7cfb7afdb4e892230cc075bbd}{\+\_\+\+FS\+\_\+\+NORTC}}~0
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_a47a493ecf767b65199e1425795f1d61d}{\+\_\+\+NORTC\+\_\+\+MON}}~6
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_aa3cf28aa915cb9081fa1aa5b44858dd6}{\+\_\+\+NORTC\+\_\+\+MDAY}}~4
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_add853644b85a7633bb782dfddb51bda5}{\+\_\+\+NORTC\+\_\+\+YEAR}}~2015
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_a01410fcb45c2d2d2c5692c56d4f0a481}{\+\_\+\+FS\+\_\+\+LOCK}}~2     /$\ast$ 0\+:Disable or $>$=1\+:Enable $\ast$/
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_a4e07d7fcae4241b73eb5b70fab5f676d}{\+\_\+\+FS\+\_\+\+REENTRANT}}~0  /$\ast$ 0\+:Disable or 1\+:Enable $\ast$/
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_a526e3cac667f53cc9a48507873348e60}{\+\_\+\+FS\+\_\+\+TIMEOUT}}~1000 /$\ast$ Timeout period in unit of time ticks $\ast$/
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_a9a3f0670343e51652dd12b18fa90a9eb}{\+\_\+\+SYNC\+\_\+t}}~NULL
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_a1eee011a3d69ab8a3d199b985fe2ad36}{ff\+\_\+malloc}}~malloc
+\item 
+\#define \mbox{\hyperlink{ffconf_8h_ac7b5118894bfc43cc0d19f7290a7be0c}{ff\+\_\+free}}~free
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ffconf_8h_aaf9b5cee569d93f1ebe43ea70916569f}\label{ffconf_8h_aaf9b5cee569d93f1ebe43ea70916569f}} 
+\index{ffconf.h@{ffconf.h}!\_CODE\_PAGE@{\_CODE\_PAGE}}
+\index{\_CODE\_PAGE@{\_CODE\_PAGE}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_CODE\_PAGE}{\_CODE\_PAGE}}
+{\footnotesize\ttfamily \#define \+\_\+\+CODE\+\_\+\+PAGE~850}
+
+\mbox{\Hypertarget{ffconf_8h_a45082af332369ed49492446a2d4d4c5a}\label{ffconf_8h_a45082af332369ed49492446a2d4d4c5a}} 
+\index{ffconf.h@{ffconf.h}!\_FFCONF@{\_FFCONF}}
+\index{\_FFCONF@{\_FFCONF}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_FFCONF}{\_FFCONF}}
+{\footnotesize\ttfamily \#define \+\_\+\+FFCONF~68300 /$\ast$ Revision ID $\ast$/}
+
+Fat\+Fs -\/ Generic FAT file system module R0.\+12c (C)ChaN, 2017
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2023 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. \mbox{\Hypertarget{ffconf_8h_a104309dc91be2af9375923ed7b03490e}\label{ffconf_8h_a104309dc91be2af9375923ed7b03490e}} 
+\index{ffconf.h@{ffconf.h}!\_FS\_EXFAT@{\_FS\_EXFAT}}
+\index{\_FS\_EXFAT@{\_FS\_EXFAT}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_FS\_EXFAT}{\_FS\_EXFAT}}
+{\footnotesize\ttfamily \#define \+\_\+\+FS\+\_\+\+EXFAT~0}
+
+\mbox{\Hypertarget{ffconf_8h_a01410fcb45c2d2d2c5692c56d4f0a481}\label{ffconf_8h_a01410fcb45c2d2d2c5692c56d4f0a481}} 
+\index{ffconf.h@{ffconf.h}!\_FS\_LOCK@{\_FS\_LOCK}}
+\index{\_FS\_LOCK@{\_FS\_LOCK}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_FS\_LOCK}{\_FS\_LOCK}}
+{\footnotesize\ttfamily \#define \+\_\+\+FS\+\_\+\+LOCK~2     /$\ast$ 0\+:Disable or $>$=1\+:Enable $\ast$/}
+
+\mbox{\Hypertarget{ffconf_8h_abefed32e4f049538ff7d7101cd8e3643}\label{ffconf_8h_abefed32e4f049538ff7d7101cd8e3643}} 
+\index{ffconf.h@{ffconf.h}!\_FS\_MINIMIZE@{\_FS\_MINIMIZE}}
+\index{\_FS\_MINIMIZE@{\_FS\_MINIMIZE}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_FS\_MINIMIZE}{\_FS\_MINIMIZE}}
+{\footnotesize\ttfamily \#define \+\_\+\+FS\+\_\+\+MINIMIZE~0      /$\ast$ 0 to 3 $\ast$/}
+
+\mbox{\Hypertarget{ffconf_8h_aaa0caa2085332d2febf0e392559ad138}\label{ffconf_8h_aaa0caa2085332d2febf0e392559ad138}} 
+\index{ffconf.h@{ffconf.h}!\_FS\_NOFSINFO@{\_FS\_NOFSINFO}}
+\index{\_FS\_NOFSINFO@{\_FS\_NOFSINFO}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_FS\_NOFSINFO}{\_FS\_NOFSINFO}}
+{\footnotesize\ttfamily \#define \+\_\+\+FS\+\_\+\+NOFSINFO~0 /$\ast$ 0,1,2 or 3 $\ast$/}
+
+\mbox{\Hypertarget{ffconf_8h_a851cace7cfb7afdb4e892230cc075bbd}\label{ffconf_8h_a851cace7cfb7afdb4e892230cc075bbd}} 
+\index{ffconf.h@{ffconf.h}!\_FS\_NORTC@{\_FS\_NORTC}}
+\index{\_FS\_NORTC@{\_FS\_NORTC}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_FS\_NORTC}{\_FS\_NORTC}}
+{\footnotesize\ttfamily \#define \+\_\+\+FS\+\_\+\+NORTC~0}
+
+\mbox{\Hypertarget{ffconf_8h_afb8d35370cfe0c23832ac2d82e854ec6}\label{ffconf_8h_afb8d35370cfe0c23832ac2d82e854ec6}} 
+\index{ffconf.h@{ffconf.h}!\_FS\_READONLY@{\_FS\_READONLY}}
+\index{\_FS\_READONLY@{\_FS\_READONLY}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_FS\_READONLY}{\_FS\_READONLY}}
+{\footnotesize\ttfamily \#define \+\_\+\+FS\+\_\+\+READONLY~0      /$\ast$ 0\+:Read/Write or 1\+:Read only $\ast$/}
+
+\mbox{\Hypertarget{ffconf_8h_a4e07d7fcae4241b73eb5b70fab5f676d}\label{ffconf_8h_a4e07d7fcae4241b73eb5b70fab5f676d}} 
+\index{ffconf.h@{ffconf.h}!\_FS\_REENTRANT@{\_FS\_REENTRANT}}
+\index{\_FS\_REENTRANT@{\_FS\_REENTRANT}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_FS\_REENTRANT}{\_FS\_REENTRANT}}
+{\footnotesize\ttfamily \#define \+\_\+\+FS\+\_\+\+REENTRANT~0  /$\ast$ 0\+:Disable or 1\+:Enable $\ast$/}
+
+\mbox{\Hypertarget{ffconf_8h_a52faf11025401372f71e9d81905b7af4}\label{ffconf_8h_a52faf11025401372f71e9d81905b7af4}} 
+\index{ffconf.h@{ffconf.h}!\_FS\_RPATH@{\_FS\_RPATH}}
+\index{\_FS\_RPATH@{\_FS\_RPATH}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_FS\_RPATH}{\_FS\_RPATH}}
+{\footnotesize\ttfamily \#define \+\_\+\+FS\+\_\+\+RPATH~0 /$\ast$ 0 to 2 $\ast$/}
+
+\mbox{\Hypertarget{ffconf_8h_a526e3cac667f53cc9a48507873348e60}\label{ffconf_8h_a526e3cac667f53cc9a48507873348e60}} 
+\index{ffconf.h@{ffconf.h}!\_FS\_TIMEOUT@{\_FS\_TIMEOUT}}
+\index{\_FS\_TIMEOUT@{\_FS\_TIMEOUT}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_FS\_TIMEOUT}{\_FS\_TIMEOUT}}
+{\footnotesize\ttfamily \#define \+\_\+\+FS\+\_\+\+TIMEOUT~1000 /$\ast$ Timeout period in unit of time ticks $\ast$/}
+
+\mbox{\Hypertarget{ffconf_8h_aa21b30e70610594d3af3a28832b584f6}\label{ffconf_8h_aa21b30e70610594d3af3a28832b584f6}} 
+\index{ffconf.h@{ffconf.h}!\_FS\_TINY@{\_FS\_TINY}}
+\index{\_FS\_TINY@{\_FS\_TINY}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_FS\_TINY}{\_FS\_TINY}}
+{\footnotesize\ttfamily \#define \+\_\+\+FS\+\_\+\+TINY~0      /$\ast$ 0\+:Normal or 1\+:Tiny $\ast$/}
+
+\mbox{\Hypertarget{ffconf_8h_a8dd7e7f166bb146970b394d53cf01d80}\label{ffconf_8h_a8dd7e7f166bb146970b394d53cf01d80}} 
+\index{ffconf.h@{ffconf.h}!\_LFN\_UNICODE@{\_LFN\_UNICODE}}
+\index{\_LFN\_UNICODE@{\_LFN\_UNICODE}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_LFN\_UNICODE}{\_LFN\_UNICODE}}
+{\footnotesize\ttfamily \#define \+\_\+\+LFN\+\_\+\+UNICODE~0 /$\ast$ 0\+:ANSI/OEM or 1\+:Unicode $\ast$/}
+
+\mbox{\Hypertarget{ffconf_8h_a14e73a5c703a586c614b3e40b849f82c}\label{ffconf_8h_a14e73a5c703a586c614b3e40b849f82c}} 
+\index{ffconf.h@{ffconf.h}!\_MAX\_LFN@{\_MAX\_LFN}}
+\index{\_MAX\_LFN@{\_MAX\_LFN}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_MAX\_LFN}{\_MAX\_LFN}}
+{\footnotesize\ttfamily \#define \+\_\+\+MAX\+\_\+\+LFN~255  /$\ast$ Maximum LFN length to handle (12 to 255) $\ast$/}
+
+\mbox{\Hypertarget{ffconf_8h_ac271b697378912f17132cb9c7d0de024}\label{ffconf_8h_ac271b697378912f17132cb9c7d0de024}} 
+\index{ffconf.h@{ffconf.h}!\_MAX\_SS@{\_MAX\_SS}}
+\index{\_MAX\_SS@{\_MAX\_SS}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_MAX\_SS}{\_MAX\_SS}}
+{\footnotesize\ttfamily \#define \+\_\+\+MAX\+\_\+\+SS~4096  /$\ast$ 512, 1024, 2048 or 4096 $\ast$/}
+
+\mbox{\Hypertarget{ffconf_8h_ad03aa6d0e294709ae15898ee2c14dc3a}\label{ffconf_8h_ad03aa6d0e294709ae15898ee2c14dc3a}} 
+\index{ffconf.h@{ffconf.h}!\_MIN\_SS@{\_MIN\_SS}}
+\index{\_MIN\_SS@{\_MIN\_SS}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_MIN\_SS}{\_MIN\_SS}}
+{\footnotesize\ttfamily \#define \+\_\+\+MIN\+\_\+\+SS~512  /$\ast$ 512, 1024, 2048 or 4096 $\ast$/}
+
+\mbox{\Hypertarget{ffconf_8h_adc02609ba893fe8706a2f8af0e3a3bb5}\label{ffconf_8h_adc02609ba893fe8706a2f8af0e3a3bb5}} 
+\index{ffconf.h@{ffconf.h}!\_MULTI\_PARTITION@{\_MULTI\_PARTITION}}
+\index{\_MULTI\_PARTITION@{\_MULTI\_PARTITION}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_MULTI\_PARTITION}{\_MULTI\_PARTITION}}
+{\footnotesize\ttfamily \#define \+\_\+\+MULTI\+\_\+\+PARTITION~0 /$\ast$ 0\+:Single partition, 1\+:Multiple partition $\ast$/}
+
+\mbox{\Hypertarget{ffconf_8h_aa3cf28aa915cb9081fa1aa5b44858dd6}\label{ffconf_8h_aa3cf28aa915cb9081fa1aa5b44858dd6}} 
+\index{ffconf.h@{ffconf.h}!\_NORTC\_MDAY@{\_NORTC\_MDAY}}
+\index{\_NORTC\_MDAY@{\_NORTC\_MDAY}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_NORTC\_MDAY}{\_NORTC\_MDAY}}
+{\footnotesize\ttfamily \#define \+\_\+\+NORTC\+\_\+\+MDAY~4}
+
+\mbox{\Hypertarget{ffconf_8h_a47a493ecf767b65199e1425795f1d61d}\label{ffconf_8h_a47a493ecf767b65199e1425795f1d61d}} 
+\index{ffconf.h@{ffconf.h}!\_NORTC\_MON@{\_NORTC\_MON}}
+\index{\_NORTC\_MON@{\_NORTC\_MON}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_NORTC\_MON}{\_NORTC\_MON}}
+{\footnotesize\ttfamily \#define \+\_\+\+NORTC\+\_\+\+MON~6}
+
+\mbox{\Hypertarget{ffconf_8h_add853644b85a7633bb782dfddb51bda5}\label{ffconf_8h_add853644b85a7633bb782dfddb51bda5}} 
+\index{ffconf.h@{ffconf.h}!\_NORTC\_YEAR@{\_NORTC\_YEAR}}
+\index{\_NORTC\_YEAR@{\_NORTC\_YEAR}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_NORTC\_YEAR}{\_NORTC\_YEAR}}
+{\footnotesize\ttfamily \#define \+\_\+\+NORTC\+\_\+\+YEAR~2015}
+
+\mbox{\Hypertarget{ffconf_8h_ae89b13dba7638cb22b5587fcb335ffe3}\label{ffconf_8h_ae89b13dba7638cb22b5587fcb335ffe3}} 
+\index{ffconf.h@{ffconf.h}!\_STR\_VOLUME\_ID@{\_STR\_VOLUME\_ID}}
+\index{\_STR\_VOLUME\_ID@{\_STR\_VOLUME\_ID}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_STR\_VOLUME\_ID}{\_STR\_VOLUME\_ID}}
+{\footnotesize\ttfamily \#define \+\_\+\+STR\+\_\+\+VOLUME\+\_\+\+ID~0 /$\ast$ 0\+:Use only 0-\/9 for drive ID, 1\+:Use strings for drive ID $\ast$/}
+
+\mbox{\Hypertarget{ffconf_8h_a36a53af63e05351562e34f082eec3f33}\label{ffconf_8h_a36a53af63e05351562e34f082eec3f33}} 
+\index{ffconf.h@{ffconf.h}!\_STRF\_ENCODE@{\_STRF\_ENCODE}}
+\index{\_STRF\_ENCODE@{\_STRF\_ENCODE}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_STRF\_ENCODE}{\_STRF\_ENCODE}}
+{\footnotesize\ttfamily \#define \+\_\+\+STRF\+\_\+\+ENCODE~3}
+
+\mbox{\Hypertarget{ffconf_8h_a9a3f0670343e51652dd12b18fa90a9eb}\label{ffconf_8h_a9a3f0670343e51652dd12b18fa90a9eb}} 
+\index{ffconf.h@{ffconf.h}!\_SYNC\_t@{\_SYNC\_t}}
+\index{\_SYNC\_t@{\_SYNC\_t}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_SYNC\_t}{\_SYNC\_t}}
+{\footnotesize\ttfamily \#define \+\_\+\+SYNC\+\_\+t~NULL}
+
+\mbox{\Hypertarget{ffconf_8h_adff028cbd80032c637fe1bb4e9b6fdfd}\label{ffconf_8h_adff028cbd80032c637fe1bb4e9b6fdfd}} 
+\index{ffconf.h@{ffconf.h}!\_USE\_CHMOD@{\_USE\_CHMOD}}
+\index{\_USE\_CHMOD@{\_USE\_CHMOD}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_USE\_CHMOD}{\_USE\_CHMOD}}
+{\footnotesize\ttfamily \#define \+\_\+\+USE\+\_\+\+CHMOD~0}
+
+\mbox{\Hypertarget{ffconf_8h_a89e14a6d520a11044b87a947e83a5acb}\label{ffconf_8h_a89e14a6d520a11044b87a947e83a5acb}} 
+\index{ffconf.h@{ffconf.h}!\_USE\_EXPAND@{\_USE\_EXPAND}}
+\index{\_USE\_EXPAND@{\_USE\_EXPAND}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_USE\_EXPAND}{\_USE\_EXPAND}}
+{\footnotesize\ttfamily \#define \+\_\+\+USE\+\_\+\+EXPAND~0}
+
+\mbox{\Hypertarget{ffconf_8h_a85f4bdb33729ebdaaf9edeec948ac0e7}\label{ffconf_8h_a85f4bdb33729ebdaaf9edeec948ac0e7}} 
+\index{ffconf.h@{ffconf.h}!\_USE\_FASTSEEK@{\_USE\_FASTSEEK}}
+\index{\_USE\_FASTSEEK@{\_USE\_FASTSEEK}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_USE\_FASTSEEK}{\_USE\_FASTSEEK}}
+{\footnotesize\ttfamily \#define \+\_\+\+USE\+\_\+\+FASTSEEK~1}
+
+\mbox{\Hypertarget{ffconf_8h_abf97f960987a4a2be3b876cc45612b06}\label{ffconf_8h_abf97f960987a4a2be3b876cc45612b06}} 
+\index{ffconf.h@{ffconf.h}!\_USE\_FIND@{\_USE\_FIND}}
+\index{\_USE\_FIND@{\_USE\_FIND}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_USE\_FIND}{\_USE\_FIND}}
+{\footnotesize\ttfamily \#define \+\_\+\+USE\+\_\+\+FIND~1}
+
+\mbox{\Hypertarget{ffconf_8h_ae49b948c9a92ff7082b88bd36f63d988}\label{ffconf_8h_ae49b948c9a92ff7082b88bd36f63d988}} 
+\index{ffconf.h@{ffconf.h}!\_USE\_FORWARD@{\_USE\_FORWARD}}
+\index{\_USE\_FORWARD@{\_USE\_FORWARD}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_USE\_FORWARD}{\_USE\_FORWARD}}
+{\footnotesize\ttfamily \#define \+\_\+\+USE\+\_\+\+FORWARD~0}
+
+\mbox{\Hypertarget{ffconf_8h_a281a4fc4668e40fc896fc865f52f9421}\label{ffconf_8h_a281a4fc4668e40fc896fc865f52f9421}} 
+\index{ffconf.h@{ffconf.h}!\_USE\_LABEL@{\_USE\_LABEL}}
+\index{\_USE\_LABEL@{\_USE\_LABEL}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_USE\_LABEL}{\_USE\_LABEL}}
+{\footnotesize\ttfamily \#define \+\_\+\+USE\+\_\+\+LABEL~0}
+
+\mbox{\Hypertarget{ffconf_8h_ae471cce284bf1888f9e991f5a811fc11}\label{ffconf_8h_ae471cce284bf1888f9e991f5a811fc11}} 
+\index{ffconf.h@{ffconf.h}!\_USE\_LFN@{\_USE\_LFN}}
+\index{\_USE\_LFN@{\_USE\_LFN}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_USE\_LFN}{\_USE\_LFN}}
+{\footnotesize\ttfamily \#define \+\_\+\+USE\+\_\+\+LFN~2    /$\ast$ 0 to 3 $\ast$/}
+
+\mbox{\Hypertarget{ffconf_8h_a62cdce547af40f0c1599698ee151bbd7}\label{ffconf_8h_a62cdce547af40f0c1599698ee151bbd7}} 
+\index{ffconf.h@{ffconf.h}!\_USE\_MKFS@{\_USE\_MKFS}}
+\index{\_USE\_MKFS@{\_USE\_MKFS}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_USE\_MKFS}{\_USE\_MKFS}}
+{\footnotesize\ttfamily \#define \+\_\+\+USE\+\_\+\+MKFS~1}
+
+\mbox{\Hypertarget{ffconf_8h_aaab0313f867bb008b64236239f5c2660}\label{ffconf_8h_aaab0313f867bb008b64236239f5c2660}} 
+\index{ffconf.h@{ffconf.h}!\_USE\_STRFUNC@{\_USE\_STRFUNC}}
+\index{\_USE\_STRFUNC@{\_USE\_STRFUNC}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_USE\_STRFUNC}{\_USE\_STRFUNC}}
+{\footnotesize\ttfamily \#define \+\_\+\+USE\+\_\+\+STRFUNC~2      /$\ast$ 0\+:Disable or 1-\/2\+:Enable $\ast$/}
+
+\mbox{\Hypertarget{ffconf_8h_a1f93ee7e57bb9d1221f34bfe80e18a61}\label{ffconf_8h_a1f93ee7e57bb9d1221f34bfe80e18a61}} 
+\index{ffconf.h@{ffconf.h}!\_USE\_TRIM@{\_USE\_TRIM}}
+\index{\_USE\_TRIM@{\_USE\_TRIM}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_USE\_TRIM}{\_USE\_TRIM}}
+{\footnotesize\ttfamily \#define \+\_\+\+USE\+\_\+\+TRIM~0}
+
+\mbox{\Hypertarget{ffconf_8h_a75c97afb8b06935364e42e3ec3fdc6c4}\label{ffconf_8h_a75c97afb8b06935364e42e3ec3fdc6c4}} 
+\index{ffconf.h@{ffconf.h}!\_VOLUME\_STRS@{\_VOLUME\_STRS}}
+\index{\_VOLUME\_STRS@{\_VOLUME\_STRS}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_VOLUME\_STRS}{\_VOLUME\_STRS}}
+{\footnotesize\ttfamily \#define \+\_\+\+VOLUME\+\_\+\+STRS~\char`\"{}RAM\char`\"{},\char`\"{}NAND\char`\"{},\char`\"{}CF\char`\"{},\char`\"{}SD1\char`\"{},\char`\"{}SD2\char`\"{},\char`\"{}USB1\char`\"{},\char`\"{}USB2\char`\"{},\char`\"{}USB3\char`\"{}}
+
+\mbox{\Hypertarget{ffconf_8h_a366da9a40c8ceb3103a6b72ca02b9969}\label{ffconf_8h_a366da9a40c8ceb3103a6b72ca02b9969}} 
+\index{ffconf.h@{ffconf.h}!\_VOLUMES@{\_VOLUMES}}
+\index{\_VOLUMES@{\_VOLUMES}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{\_VOLUMES}{\_VOLUMES}}
+{\footnotesize\ttfamily \#define \+\_\+\+VOLUMES~1}
+
+\mbox{\Hypertarget{ffconf_8h_ac7b5118894bfc43cc0d19f7290a7be0c}\label{ffconf_8h_ac7b5118894bfc43cc0d19f7290a7be0c}} 
+\index{ffconf.h@{ffconf.h}!ff\_free@{ff\_free}}
+\index{ff\_free@{ff\_free}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{ff\_free}{ff\_free}}
+{\footnotesize\ttfamily \#define ff\+\_\+free~free}
+
+\mbox{\Hypertarget{ffconf_8h_a1eee011a3d69ab8a3d199b985fe2ad36}\label{ffconf_8h_a1eee011a3d69ab8a3d199b985fe2ad36}} 
+\index{ffconf.h@{ffconf.h}!ff\_malloc@{ff\_malloc}}
+\index{ff\_malloc@{ff\_malloc}!ffconf.h@{ffconf.h}}
+\doxysubsubsection{\texorpdfstring{ff\_malloc}{ff\_malloc}}
+{\footnotesize\ttfamily \#define ff\+\_\+malloc~malloc}
+
