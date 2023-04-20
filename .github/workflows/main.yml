@@ -19,7 +19,7 @@ jobs:
        sudo apt-get install cppcheck
        sudo apt-get install doxygen
     
-   - name: flujo_runcppcheck_path
+    - name: flujo_runcppcheck_path
       run: |
         cppcheck --enable=all SDcardBootloader --xml 2> SDcardBootloader/htmlREPORTcppcheck/cppcheck-result.xml
         
