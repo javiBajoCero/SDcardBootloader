@@ -32,7 +32,7 @@ jobs:
       run: |
        cd ..
         wget https://github.com/danmar/cppcheck/tree/main/htmlreport
-        cppcheck-htmlreport --source-dir=SDcardBootloader/. --title=htmlREPORTcppcheck --file=SDcardBootloader/htmlREPORTcppcheck/cppcheck-result.xml --report-dir=SDcardBootloader/htmlREPORTcppcheck
+        cppcheck-htmlreport --source-dir=bootloader/. --title=htmlREPORTcppcheck --file=bootloader/htmlREPORTcppcheck/cppcheck-result.xml --report-dir=bootloader/htmlREPORTcppcheck
         
 #    - name: flujo update changes
 #      run: |
