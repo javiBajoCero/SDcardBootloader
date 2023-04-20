@@ -21,8 +21,6 @@ jobs:
     
     - name: flujo_runcppcheck_path
       run: |
-        cd bootloader
-        ls
         cppcheck --enable=all bootloader --xml 2> bootloader/htmlREPORTcppcheck/cppcheck-result.xml
         
     - name: flujo_rundoxygen
