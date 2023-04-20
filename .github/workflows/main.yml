@@ -28,11 +28,11 @@ jobs:
         cd SDcardBootloader/documentation_doxygen
         doxygen config_doxygen.conf
         
-#    - name: flujo_htmlreport_download
-#      run: |
-#       cd ..
-#        wget https://github.com/javierMLuxae/cppcheck/blob/main/htmlreport/cppcheck-htmlreport
-#        cppcheck-htmlreport --source-dir=130000070XX_leptos3colourLEDs/. --title=htmlREPORTcppcheck --file=130000070XX_leptos3colourLEDs/1300000705X_3COLORS/htmlREPORTcppcheck/cppcheck-result.xml --report-dir=130000070XX_leptos3colourLEDs/1300000705X_3COLORS/htmlREPORTcppcheck
+    - name: flujo_htmlreport_download
+      run: |
+       cd ..
+        wget https://github.com/danmar/cppcheck/tree/main/htmlreport
+        cppcheck-htmlreport --source-dir=130000070XX_leptos3colourLEDs/. --title=htmlREPORTcppcheck --file=130000070XX_leptos3colourLEDs/1300000705X_3COLORS/htmlREPORTcppcheck/cppcheck-result.xml --report-dir=130000070XX_leptos3colourLEDs/1300000705X_3COLORS/htmlREPORTcppcheck
         
 #    - name: flujo update changes
 #      run: |
