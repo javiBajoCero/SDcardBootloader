@@ -25,7 +25,7 @@ jobs:
         
     - name: flujo_rundoxygen
       run: |
-        cd documentation_doxygen
+        cd bootloader/documentation_doxygen
         doxygen config_doxygen.conf
         
     - name: flujo_htmlreport_download
