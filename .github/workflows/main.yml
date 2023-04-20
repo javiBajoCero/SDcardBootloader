@@ -32,7 +32,7 @@ jobs:
       run: |
        cd ..
         wget https://github.com/danmar/cppcheck/tree/main/htmlreport
-        cppcheck-htmlreport --source-dir=130000070XX_leptos3colourLEDs/. --title=htmlREPORTcppcheck --file=130000070XX_leptos3colourLEDs/1300000705X_3COLORS/htmlREPORTcppcheck/cppcheck-result.xml --report-dir=130000070XX_leptos3colourLEDs/1300000705X_3COLORS/htmlREPORTcppcheck
+        cppcheck-htmlreport --source-dir=SDcardBootloader/. --title=htmlREPORTcppcheck --file=SDcardBootloader/htmlREPORTcppcheck/cppcheck-result.xml --report-dir=SDcardBootloader/htmlREPORTcppcheck
         
 #    - name: flujo update changes
 #      run: |
