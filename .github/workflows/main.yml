@@ -19,14 +19,14 @@ jobs:
        sudo apt-get install cppcheck
        sudo apt-get install doxygen
     
-#   - name: flujo_runcppcheck_path
-#      run: |
-#        cppcheck --enable=all 1300000705X_3COLORS --xml 2> 1300000705X_3COLORS/htmlREPORTcppcheck/cppcheck-result.xml
+   - name: flujo_runcppcheck_path
+      run: |
+        cppcheck --enable=all SDcardBootloader --xml 2> SDcardBootloader/htmlREPORTcppcheck/cppcheck-result.xml
         
-#    - name: flujo_rundoxygen
-#      run: |
-#        cd 1300000705X_3COLORS/documentation_doxygen
-#        doxygen config_doxygen.conf
+    - name: flujo_rundoxygen
+      run: |
+        cd SDcardBootloader/documentation_doxygen
+        doxygen config_doxygen.conf
         
 #    - name: flujo_htmlreport_download
 #      run: |
