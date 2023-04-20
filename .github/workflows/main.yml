@@ -21,11 +21,11 @@ jobs:
     
     - name: flujo_runcppcheck_path
       run: |
-        cppcheck --enable=all SDcardBootloader --xml 2> SDcardBootloader/htmlREPORTcppcheck/cppcheck-result.xml
+        cppcheck --enable=all --xml 2> htmlREPORTcppcheck/cppcheck-result.xml
         
     - name: flujo_rundoxygen
       run: |
-        cd SDcardBootloader/documentation_doxygen
+        cd documentation_doxygen
         doxygen config_doxygen.conf
         
     - name: flujo_htmlreport_download
