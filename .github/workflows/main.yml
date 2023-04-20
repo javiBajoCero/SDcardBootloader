@@ -21,7 +21,7 @@ jobs:
     
     - name: flujo_runcppcheck_path
       run: |
-        cppcheck --enable=all SDcardBootloader --xml 2> SDcardBootloader/htmlREPORTcppcheck/cppcheck-result.xml
+        cppcheck --enable=all bootloader --xml 2> bootloader/htmlREPORTcppcheck/cppcheck-result.xml
         
     - name: flujo_rundoxygen
       run: |
